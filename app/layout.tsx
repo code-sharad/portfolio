@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header";
 import ActiveSessionContextProvider from "@/context/active-session-context";
 import Footer from "./components/footer";
+import { Analytics } from '@vercel/analytics/react';
 // import ThemeSwitch from "./components/theme-switch";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer/>
+          <Analytics/>
         </ActiveSessionContextProvider>
         {/* <ThemeSwitch/> */}
       </body>
