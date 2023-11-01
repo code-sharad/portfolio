@@ -13,8 +13,19 @@ import { useActiveSectionContext } from "@/context/active-session-context";
 import useSectionInView from "@/lib/hooks";
 
 function Intro() {
- const {ref} = useSectionInView('Home',0.5);
-  // kuu;
+  const { ref } = useSectionInView("Home", 0.5);
+
+  const contactButton = () => {
+    const recipientEmail = "codesharad@gmail.com";
+    const gmailAppUrl = `googlegmail://co?to=${recipientEmail}`;
+    window.location.href = gmailAppUrl;
+
+    // Fallback for desktop or if the Gmail app link doesn't work
+    window.setTimeout(() => {
+      const gmailWebUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}`;
+      window.location.href = gmailWebUrl;
+    }, 100);
+  };
   return (
     <section
       ref={ref}
@@ -34,7 +45,9 @@ function Intro() {
             <Image
               className="h-34 w-35 object-cover rounded-full border-4 border-white border-opacity-40 shadow-black/[0.03] sm:h-32 sm:w-32"
               // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
-              src={"https://media.licdn.com/dms/image/D5603AQEZdkuao0-wnA/profile-displayphoto-shrink_400_400/0/1696959069420?e=1704326400&v=beta&t=O06oD-8RVcxMzstNvO7zBt8pK_OKnxxcEoT_QJtBQ70"}
+              src={
+                "https://media.licdn.com/dms/image/D5603AQEZdkuao0-wnA/profile-displayphoto-shrink_400_400/0/1696959069420?e=1704326400&v=beta&t=O06oD-8RVcxMzstNvO7zBt8pK_OKnxxcEoT_QJtBQ70"
+              }
               priority={true}
               alt="Sharad Bhadait"
               quality={95}
@@ -75,13 +88,13 @@ function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
-          href="#content"
+       <form  action="mailto:codesharad@gmail.com">
+        <span
           className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
         >
-          Contact me here{" "}
+          <button type="submit">Contact me here{" "}</button>
           <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
-        </Link>
+        </span></form> 
         <a
           href="/CV.pdf"
           download={"true"}
