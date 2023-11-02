@@ -10,13 +10,12 @@ import { experiencesData } from "@/lib/data";
 import "react-vertical-timeline-component/style.min.css";
 function Experience() {
   return (
-    <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+    <section  id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experience</SectionHeading>
-      <VerticalTimeline lineColor="#e5e7eb" >
+      <VerticalTimeline lineColor="#e5e7eb">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
-                
               contentStyle={{
                 background: "#f3f4f6",
                 boxShadow: "none",
@@ -34,9 +33,9 @@ function Experience() {
                 background: "white",
               }}
             >
-              <h3>{item.title}</h3>
-              <p>{item.location}</p>
-              <p>{item.description}</p>
+                <h3>{item.title}</h3>
+                <p>{item.location}</p>
+                <p>{item.description}</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

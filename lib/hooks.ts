@@ -2,7 +2,6 @@ import { useActiveSectionContext } from '@/context/active-session-context';
 import React, { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer';
 import { SectionName } from './types';
-import { type } from 'os';
 
 type useSectionInViewProps = {
     sectionName: SectionName;
