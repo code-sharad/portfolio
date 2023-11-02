@@ -4,7 +4,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/codeSharad.png";
-import rmtdevImg from "@/public/corpcomment.png";
+import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
 
 export const links = [
