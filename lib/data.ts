@@ -71,7 +71,7 @@ export const projectsData = [
   },
   {
     title: "Python Projects",
-    description:"",
+    description:"To know more about Python projects checkout GitHub",
     tags: ["Python", "Flask"],
     imageUrl: rmtdevImg,
   },
