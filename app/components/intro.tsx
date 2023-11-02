@@ -88,13 +88,13 @@ function Intro() {
           delay: 0.1,
         }}
       >
-       <form  action="mailto:codesharad@gmail.com">
+       <a href="mailto:codesharad@gmail.com"  rel="noopener noreferrer">
         <span
           className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
         >
           <button type="submit">Contact me here{" "}</button>
           <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
-        </span></form> 
+        </span></a> 
         <a
           href="/CV.pdf"
           download={"true"}
