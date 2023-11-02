@@ -70,9 +70,9 @@ export const projectsData = [
     imageUrl: corpcommentImg,
   },
   {
-    title: "Personal Portfolio",
+    title: "Python Projects",
     description:"",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Framer Motion"],
+    tags: ["Python", "Flask"],
     imageUrl: rmtdevImg,
   },
   {
