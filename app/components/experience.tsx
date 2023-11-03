@@ -11,7 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { InView } from "react-intersection-observer";
 import useSectionInView from "@/lib/hooks";
 function Experience() {
-  const { ref, inView } = useSectionInView("Projects", 0.5);
+  const { ref, inView } = useSectionInView("Projects", 0.3);
 
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
@@ -28,10 +28,11 @@ function Experience() {
                 borderRadius: "1rem",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
-                WebkitBoxShadow:"20px 20px 60px #bebebe ",
+                WebkitBoxShadow:"2px 2px 20px #bebebe ",
               }}
               contentArrowStyle={{
-                borderRight: "0.4rem solid  #f3f4f6",
+                borderRight: "1rem solid  #f3f4f6",
+                
               }}
               date={item.date}
               icon={item.icon}
