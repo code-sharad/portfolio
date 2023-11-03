@@ -8,34 +8,40 @@ import {
 } from "react-vertical-timeline-component";
 import { experiencesData } from "@/lib/data";
 import "react-vertical-timeline-component/style.min.css";
+import { InView } from "react-intersection-observer";
+import useSectionInView from "@/lib/hooks";
 function Experience() {
+  const { ref, inView } = useSectionInView("Projects", 0.5);
+
   return (
-    <section  id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+    <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experience</SectionHeading>
       <VerticalTimeline lineColor="#e5e7eb">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
+              visible={inView}
               contentStyle={{
-                background: "#f3f4f6",
-                boxShadow: "none",
-                border: "1px solid rgba(0,0,0.05)",
+                background: "#ffffff",
+                boxShadow: "2px 2px 2px black",
+                border: "1px solid rgb(0 0 0 / 0.1)",
+                borderRadius: "1rem",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
+                WebkitBoxShadow:"20px 20px 60px #bebebe ",
               }}
               contentArrowStyle={{
                 borderRight: "0.4rem solid  #f3f4f6",
               }}
               date={item.date}
               icon={item.icon}
-              visible={true}
               iconStyle={{
                 background: "white",
               }}
             >
-                <h3>{item.title}</h3>
-                <p>{item.location}</p>
-                <p>{item.description}</p>
+              <h3 className="font-bold text-lg">{item.title}</h3>
+              <p>{item.location}</p>
+              <p className="">{item.description}</p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

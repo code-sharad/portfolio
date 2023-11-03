@@ -48,7 +48,7 @@ export const experiencesData = [
     location: "Chh Sambhaji Nagar, Maharashtra, India",
     description:
       "I have completed by 11th and 12th.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(LuGraduationCap),
     date: "2020 - 2022",
   },
   {
@@ -56,7 +56,7 @@ export const experiencesData = [
     location: "Chh Sambhaji Nagar, Maharashtra, India",
     description:
       "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my 2rd year",
-    icon: React.createElement(FaReact),
+    icon: React.createElement(LuGraduationCap),
     date: "2022 - present",
   },
 ] as const;
@@ -72,7 +72,7 @@ export const projectsData = [
   {
     title: "Python Projects",
     description:"To know more about Python projects checkout GitHub",
-    tags: ["Python", "Flask"],
+    tags: ["Python", "Flask","API"],
     imageUrl: rmtdevImg,
   },
   {
@@ -105,4 +105,5 @@ export const skillsData = [
   "Express",
   "Python",
   "Framer Motion",
+  "Figma",
 ] as const;

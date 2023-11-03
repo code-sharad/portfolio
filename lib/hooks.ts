@@ -21,7 +21,7 @@ function useSectionInView(
     }
   }, [inView, setActiveSection, timeOfLastclick, sectionName]);
 
-  return {ref,};
+  return {ref,inView};
 }
 
 export default useSectionInView

@@ -88,7 +88,7 @@ function Intro() {
           delay: 0.1,
         }}
       >
-       <a href="mailto:codesharad@gmail.com"  rel="noopener noreferrer">
+       <a href="mailto:codesharad@gmail.com">
         <span
           className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
         >
