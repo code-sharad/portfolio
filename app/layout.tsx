@@ -21,6 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <meta name="theme-color" content="#9d4edd"/>
       <link rel="icon" type="" href="/favicon.ico" sizes="any" />
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90 `}
