@@ -10,7 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 export const viewport: Viewport = {
   themeColor: '#9d4edd',
-  width: '400'
+  width: '400px'
 }
 export const metadata: Metadata = {
   title: "Sharad | Personal Portfolio",
