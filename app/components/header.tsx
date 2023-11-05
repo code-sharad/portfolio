@@ -34,7 +34,7 @@ function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
                 className={clsx(
-                  "w-full flex items-center justify-center p-3   hover:text-gray-950 transition hover:dark:text-gray-300",
+                  "w-full flex outline-none items-center justify-center p-3   hover:text-gray-950 transition hover:dark:text-gray-300",
                   {
                     "text-gray-950 dark:text-gray-300": activeSection === link.name,
                   }
@@ -44,7 +44,7 @@ function Header() {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="dark:bg-gray-800 bg-gray-200 rounded-full absolute inset-0 -z-10"
+                    className="dark:bg-gray-800  bg-gray-200 rounded-full absolute inset-0 -z-10"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
