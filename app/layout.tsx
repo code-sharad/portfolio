@@ -8,10 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 // import ThemeSwitch from "./components/theme-switch";
 
 const inter = Inter({ subsets: ["latin"] });
-export const viewport: Viewport = {
-  themeColor: '#9d4edd',
-  width: '400px'
-}
+
 export const metadata: Metadata = {
   title: "Sharad | Personal Portfolio",
   description: "Sharad is Full Stack Developer",
