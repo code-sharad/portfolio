@@ -23,26 +23,38 @@ function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        I am a dedicated student currently pursuing a B.Tech degree at the  Maharashtra Institute of Technology. I am currently in my second year of the program, and my educational journey is marked by a deep passion for computer science. My primary area of focus is full-stack web development, and I thrive on the creative challenges that the world of programming presents.{" "}
+        I am a dedicated student currently pursuing a B.Tech degree at the
+        Maharashtra Institute of Technology. I am currently in my second year of
+        the program, and my educational journey is marked by a deep passion for
+        computer science. My primary area of focus is full-stack web
+        development, and I thrive on the creative challenges that the world of
+        programming presents.{" "}
         <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
+        <span className="italic underline decoration-wavy underline-offset-4  decoration-indigo-500 decoration-1">
+          My favorite part of programming
+        </span>{" "}
+        is the problem-solving aspect. I{" "}
+        <span className="underline decoration-wavy underline-offset-4  decoration-indigo-500 decoration-1">
+          love
+        </span>{" "}
+        the feeling of finally figuring out a solution to a problem. My core
+        stack is{" "}
+        <span className="font-medium text-indigo-500">
           React, Next.js, Node.js, and MongoDB{" "}
         </span>
-        Outside of my academic and coding pursuits, I have a strong interest in self-development. I find inspiration in reading books on personal growth and self-improvement. These books not only expand my knowledge but also help me develop a well-rounded and balanced perspective on life.
-        {" "}
-        
+        Outside of my academic and coding pursuits, I have a strong interest in
+        self-development. I find inspiration in reading books on personal growth
+        and self-improvement. These books not only expand my knowledge but also
+        help me develop a well-rounded and balanced perspective on life.{" "}
       </p>
 
       <p>
         <span className="italic">When I'm not coding</span>, I enjoy playing
         video games, watching anime. I also enjoy playing badminton and{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">Constitution of India and Fitness</span>. 
+        <span className="font-medium">learning new things</span>. 
+        {/* I am currently */}
+        {/* learning about{" "} */}
+        {/* <span className="font-medium">Constitution of India and Fitness</span>. */}
       </p>
     </motion.section>
   );

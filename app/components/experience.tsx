@@ -16,7 +16,7 @@ function Experience() {
   return (
     <section ref={ref} id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experience</SectionHeading>
-      <VerticalTimeline lineColor="#e5e7eb">
+      <VerticalTimeline lineColor="#C5CAE9">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
             <VerticalTimelineElement
@@ -28,11 +28,10 @@ function Experience() {
                 borderRadius: "1rem",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
-                WebkitBoxShadow:"2px 2px 20px #bebebe ",
+                WebkitBoxShadow: "2px 2px 20px #bebebe ",
               }}
               contentArrowStyle={{
                 borderRight: "1rem solid  #f3f4f6",
-                
               }}
               date={item.date}
               icon={item.icon}
