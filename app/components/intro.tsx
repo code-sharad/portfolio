@@ -56,7 +56,7 @@ function Intro() {
             </div>
           </motion.div>
           <motion.span
-            className="absolute bottom-2 right-2 text-2xl  md:text-4xl"
+            className="absolute bottom-2 right-2 text-3xl  md:text-4xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
