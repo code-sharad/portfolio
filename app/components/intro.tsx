@@ -32,7 +32,7 @@ function Intro() {
       id="home"
       className=" my-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center">
+      <div className="flex  items-center justify-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -42,21 +42,21 @@ function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
-              className="h-34 w-35 object-cover rounded-full border-4 border-white border-opacity-40 shadow-black/[0.03] sm:h-32 sm:w-32"
-              // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
-              src={
-                "https://media.licdn.com/dms/image/D5603AQEZdkuao0-wnA/profile-displayphoto-shrink_400_400/0/1696959069420?e=1704326400&v=beta&t=O06oD-8RVcxMzstNvO7zBt8pK_OKnxxcEoT_QJtBQ70"
-              }
-              priority={true}
-              alt="Sharad Bhadait"
-              quality={95}
-              width={192}
-              height={192}
-            />
+            <div className=" object-cover rounded-full border-2 md:h-[192px] md:w-[190px]   bg-gray-100 bg-opacity-30 border-white border-opacity-40 shadow-black/[0.03] sm:h-32 sm:w-32">
+              <Image
+                className=" transition-all  object-cover  rounded-full"
+                // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
+                src={"/profile.png"}
+                priority={true}
+                alt="Sharad Bhadait"
+                quality={95}
+                width={192}
+                height={192}
+              />
+            </div>
           </motion.div>
           <motion.span
-            className="absolute bottom-0 right-0  text-4xl"
+            className="absolute bottom-2 right-2  text-5xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -78,7 +78,7 @@ function Intro() {
         <span className="font-bold">Hello, I'm Sharad.</span> I'm a student{" "}
         <span className="font-bold"></span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline">MERN stack </span>.
+        <span className="underline decoration-wavy underline-offset-4  decoration-indigo-500 decoration-2">MERN stack </span>.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 font-medium"
@@ -88,13 +88,12 @@ function Intro() {
           delay: 0.1,
         }}
       >
-       <a href="mailto:codesharad@gmail.com">
-        <span
-          className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
-        >
-          <button type="submit">Contact me here{" "}</button>
-          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
-        </span></a> 
+        <a href="mailto:codesharad@gmail.com">
+          <span className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group">
+            <button type="submit">Contact me here </button>
+            <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
+          </span>
+        </a>
         <a
           href="/CV.pdf"
           download={"true"}

@@ -6,4 +6,40 @@
     .borderBlack{
     @apply border border-black/10;
 }
+/* .person {
+  @apply items-center flex flex-col w-[280px];
+} */
+.container {
+  @apply h-[312px] transition-transform duration-[250ms] ease-in-out w-[400px] rounded-[50%] scale-[0.48] after:bg-[#f2f2f2] after:content-[""] after:h-2.5 after:absolute after:w-full after:top-[390px] hover:scale-[0.54];
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.container-inner {
+  @apply relative origin-[50%] top-[-200px];
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+}
+.circle {
+  @apply bg-[#fee7d3] cursor-pointer h-[680px] pointer-events-none absolute w-[380px] rounded-[50%] left-2.5 top-[210px];
+}
+.img {
+  @apply pointer-events-none relative translate-y-5 origin-[50%_bottom] transition-transform duration-300 ease-in-out scale-[1.15];
+}
+.container:hover .img {
+  @apply translate-y-0 scale-[1.2];
+}
+.img1 {
+  @apply w-[340px] left-[22px] top-[164px];
+}
+.img2 {
+  @apply left-[-46px] w-[444px] top-[174px];
+}
+.img3 {
+  @apply w-[466px] -left-4 top-36;
+}
+.divider {
+  @apply bg-[#ca6060] h-px w-40;
+}
 }
