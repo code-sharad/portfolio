@@ -42,7 +42,7 @@ function Intro() {
               duration: 0.2,
             }}
           >
-            <div className=" object-cover rounded-full border-2 md:h-[192px] md:w-[190px]   bg-gray-100 bg-opacity-30 border-white border-opacity-40 shadow-black/[0.03] sm:h-32 sm:w-32">
+            <div className=" object-cover rounded-full border-2 md:h-[192px] md:w-[290px]   bg-gray-100 bg-opacity-30 border-white border-opacity-40 shadow-black/[0.03] sm:h-32 sm:w-32">
               <Image
                 className=" transition-all  object-cover  rounded-full"
                 // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
@@ -56,7 +56,7 @@ function Intro() {
             </div>
           </motion.div>
           <motion.span
-            className="absolute bottom-2 right-2  text-5xl"
+            className="absolute hover:scale-105 bottom-1 right-3  text-4xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -78,7 +78,7 @@ function Intro() {
         <span className="font-bold">Hello, I'm Sharad.</span> I'm a student{" "}
         <span className="font-bold"></span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline decoration-wavy underline-offset-4  decoration-indigo-500 decoration-2">MERN stack </span>.
+        <span className="underline">MERN stack </span>.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 font-medium"
