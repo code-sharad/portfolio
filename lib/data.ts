@@ -6,6 +6,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/codeSharad.png";
 import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
+import summarize from "@/public/summarize.png";
 
 export const links = [
   {
@@ -67,17 +68,24 @@ export const projectsData = [
     imageUrl: corpcommentImg,
   },
   {
+    title: "Video and Text Summarizer",
+    description:
+      "I have created a web app for summarizing the text and video.",
+    tags: ["React", "Langchain", "Openai", "Shadcn"],
+    imageUrl: wordanalyticsImg,
+  },
+  {
     title: "Python Projects",
-    description:"To know more about Python projects checkout GitHub",
-    tags: ["Python", "Flask","API"],
+    description: "To know more about Python projects checkout GitHub",
+    tags: ["Python", "Flask", "API"],
     imageUrl: rmtdevImg,
   },
   {
     title: "AirBnB Clone",
     description:
       "I have created airbnb clone with frontend and backend and also add features of uploading the image and Authentication of users .",
-    tags: ["React", "Next.js", "MongoDB","Express", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    tags: ["React", "Next.js", "MongoDB", "Express", "Tailwind", "Framer"],
+    imageUrl: summarize,
   },
 ] as const;
 

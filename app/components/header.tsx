@@ -69,11 +69,7 @@ function Header() {
         </header>
       ) : (
         <div className="flex fixed top-[0.15rem] 2 h-12  sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-          {/* <motion.div
-            className="fixed  top-0   shadow-lg  "
-            initial={{ y: -100, x: "-50%", opacity: 0 }}
-            animate={{ y: 0, x: "-50%", opacity: 1 }}            
-          ></motion.div> */}
+          
           <svg
             className="lg:mt-3 lg:ml-8 ml-4 mt-2 "
             id="svg-sign"
