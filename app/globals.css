@@ -42,4 +42,25 @@
 .divider {
   @apply bg-[#ca6060] h-px w-40;
 }
+#signature {
+  /* stroke-dasharray: 728.6748657226562; */
+  /* stroke-dashoffset: 728.6748657226562; */
+  stroke-dasharray: 1099.19580078125;
+  stroke-dashoffset: 1099.19580078125;
+  /* transform: rotate(-20deg); */
+  animation: sign 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-fill-mode: both;
+  animation-delay: 1.2s;
+  backface-visibility: hidden;
+  perspective: 1000;
+  
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
 }
