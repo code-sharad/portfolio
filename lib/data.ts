@@ -72,7 +72,7 @@ export const projectsData = [
     description:
       "I have created a web app for summarizing the text and video.",
     tags: ["React", "Langchain", "Openai", "Shadcn"],
-    imageUrl: wordanalyticsImg,
+    imageUrl:summarize ,
   },
   {
     title: "Python Projects",
@@ -85,7 +85,7 @@ export const projectsData = [
     description:
       "I have created airbnb clone with frontend and backend and also add features of uploading the image and Authentication of users .",
     tags: ["React", "Next.js", "MongoDB", "Express", "Tailwind", "Framer"],
-    imageUrl: summarize,
+    imageUrl: wordanalyticsImg,
   },
 ] as const;
 
