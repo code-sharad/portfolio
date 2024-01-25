@@ -32,7 +32,7 @@ function Intro() {
       id="home"
       className=" my-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex  items-center justify-center">
+      <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -65,9 +65,7 @@ function Intro() {
               delay: 0.1,
               duration: 0.7,
             }}
-          >
-            
-          </motion.span>
+          ></motion.span>
         </div>
       </div>
       <motion.h1
