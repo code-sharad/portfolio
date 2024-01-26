@@ -42,7 +42,7 @@ function Intro() {
               duration: 0.2,
             }}
           >
-            <div className="bg-white object-cover rounded-full border-2 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
+            <div className="bg-white object-cover rounded-full border-1 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
               <Image
                 className=" transition-all  object-cover  rounded-full"
                 // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
