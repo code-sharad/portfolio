@@ -32,7 +32,7 @@ function Intro() {
       id="home"
       className=" my-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center ">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
@@ -65,9 +65,7 @@ function Intro() {
               delay: 0.1,
               duration: 0.7,
             }}
-          >
-            
-          </motion.span>
+          ></motion.span>
         </div>
       </div>
       <motion.h1
@@ -77,11 +75,7 @@ function Intro() {
       >
         <span className="font-bold">Hello, I'm Sharad.</span> I'm a student{" "}
         <span className="font-bold"></span> I enjoy building{" "}
-        <span className="italic">sites & apps</span>. My focus is{" "}
-        <span className="underline decoration-wavy underline-offset-4  decoration-indigo-500 decoration-2">
-          MERN stack{" "}
-        </span>
-        .
+        <span className="italic">sites & apps</span>.
       </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 font-medium"
