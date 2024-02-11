@@ -35,8 +35,8 @@ function About() {
             <path
               d="M1 6.99999C16.687 3.5864 32.9688 2.50884 49.317 1.74115C75.9148 0.492128 96.8903 1.39152 123.5 4.74113"
               stroke="#5D5D5D"
-              stroke-width="2"
-              stroke-linecap="round"
+              strokeWidth="2"
+              strokeLinecap="round"
             />
           </svg>
         </span>

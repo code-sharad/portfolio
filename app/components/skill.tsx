@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 
 const fadeInAnimationVarients = {
   initial: {
-    opacity: 1,
-    y: 100,
+    opacity: 0.3,
+    y: 20,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
     // transition: {
-    //   delay: 0.05 * index,
+    //   delay: 0.02 * index,
     // },
   }),
 };
@@ -35,7 +35,9 @@ function Skills() {
             variants={fadeInAnimationVarients}
             // custom={index}
             initial="initial"
+            // whileInView="animate"
             whileInView="animate"
+            exit={{ opacity: 0 }}
             className="bg-white border shadow-lg border-indigo-600/[0.3] rounded-xl px-5 py-3"
             key={index}
           >
