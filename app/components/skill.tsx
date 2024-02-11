@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 
 const fadeInAnimationVarients = {
   initial: {
-    opacity: 0,
+    opacity: 1,
     y: 100,
   },
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
+    // transition: {
+    //   delay: 0.05 * index,
+    // },
   }),
 };
 
@@ -33,11 +33,10 @@ function Skills() {
         {skillsData.map((skill, index) => (
           <motion.li
             variants={fadeInAnimationVarients}
-            custom={index}
+            // custom={index}
             initial="initial"
             whileInView="animate"
             className="bg-white border shadow-lg border-indigo-600/[0.3] rounded-xl px-5 py-3"
-
             key={index}
           >
             {skill}
