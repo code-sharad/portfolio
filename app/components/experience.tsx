@@ -14,10 +14,18 @@ import { TracingBeam } from "./tracing-beam";
 function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.3);
   return (
-    <section ref={ref} id="experience" className="px-6 scroll-mt-28 mb-28 sm:mb-40">
+    <section
+      ref={ref}
+      id="experience"
+      className="px-6 scroll-mt-28 mb-28 sm:mb-40"
+    >
       <SectionHeading>My Experience</SectionHeading>
 
-      <TracingBeam  className={`lg:relative   md:left-20 py-10`}>
+      <TracingBeam
+        className={`lg:relative  ${
+          inView === true ? "visible" : "invisible"
+        }   md:left-20 py-10`}
+      >
         <VerticalTimeline
           lineColor="transparent"
           className="lg:absolute  lg:-left-[7.5rem] md:right-[10%] "
