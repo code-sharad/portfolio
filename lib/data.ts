@@ -7,6 +7,7 @@ import corpcommentImg from "@/public/codeSharad.png";
 import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
 import summarize from "@/public/summarize.png";
+import projecthub from "@/public/projecthubs.png";
 
 export const links = [
   {
@@ -60,6 +61,12 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title:"ProjectHub",
+    description:"It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
+    tags:['ReactJS','tailwindcss','appwrite','backend DigitalOcean'],
+    imageUrl:projecthub
+  },
   {
     title: "Personal Accounts",
     description:
