@@ -52,7 +52,7 @@ export const experiencesData = [
     title: "Arohi Softwares",
     location: "Remote, India",
     description:
-      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using react.js, tailwindcss, framer-motion for Arohi Softwares. Dcvclopcd thc backend and video transcoding system for thc Learning Managcmcnt Systcm (LLMS) using Express.js, AWS S3, and CloudFront. Containerized EMS and LMS by creating Docker images and deployed them to Amazon ECS for scalable and efficient management.",
+      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using react.js, tailwindcss, framer-motion for Arohi Softwares. Developed the backend and video transcoding system for thc Learning Managcmcnt Systcm (LLMS) using Express.js, AWS S3, and CloudFront. Containerized EMS and LMS by creating Docker images and deployed them to Amazon ECS for scalable and efficient management.",
     icon: React.createElement(LuBuilding),
     date: "June 2024 - Sept 2024",
   },
