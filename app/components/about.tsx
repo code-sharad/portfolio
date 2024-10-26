@@ -43,7 +43,7 @@ function About() {
       </SectionHeading>
       <p className="mb-3">
         I am a dedicated student currently pursuing a B.Tech degree at the
-        Maharashtra Institute of Technology. I am currently in my second year of
+        Maharashtra Institute of Technology. I am currently in my third year of
         the program, and my educational journey is marked by a deep passion for
         computer science. My primary area of focus is full-stack web
         development, and I thrive on the creative challenges that the world of
