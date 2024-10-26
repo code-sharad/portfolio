@@ -1,8 +1,8 @@
 
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { FaReact, } from "react-icons/fa";
+import { LuGraduationCap , LuBuilding} from "react-icons/lu";
 import corpcommentImg from "@/public/codeSharad.png";
 import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
@@ -37,18 +37,24 @@ export const experiencesData = [
   {
     title: "Orchid English School",
     location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description:
-      "I have done my Schooling from Orchid English School.",
+    description: "I have done my Schooling from Orchid English School.",
     icon: React.createElement(LuGraduationCap),
     date: "2015 - 2020",
   },
   {
     title: "Orchid Techo College",
     location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description:
-      "I have completed by 11th and 12th.",
+    description: "I have completed by 11th and 12th.",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - 2022",
+  },
+  {
+    title: "Arohi Softwares",
+    location: "Remote, India",
+    description:
+      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using react.js, tailwindcss, framer-motion for Arohi Softwares. Dcvclopcd thc backend and video transcoding system for thc Learning Managcmcnt Systcm (LLMS) using Express.js, AWS S3, and CloudFront. Containerized EMS and LMS by creating Docker images and deployed them to Amazon ECS for scalable and efficient management.",
+    icon: React.createElement(LuBuilding),
+    date: "June 2024 - Sept 2024",
   },
   {
     title: "Maharashtra Institute of Technology",
@@ -118,4 +124,8 @@ export const skillsData = [
   "Python",
   "Framer Motion",
   "Figma",
+  "Docker",
+  "AWS",
+  "DigitalOcean",
+  "Azure"
 ] as const;
