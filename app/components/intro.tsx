@@ -48,7 +48,7 @@ function Intro() {
                 // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
                 src={"/profile.png"}
                 priority={true}
-                alt="Sharad Bhadait"
+                alt="My new Profile image"
                 quality={95}
                 width={192}
                 height={192}
