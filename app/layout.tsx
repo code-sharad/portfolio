@@ -6,7 +6,6 @@ import ActiveSessionContextProvider from "@/context/active-session-context";
 import Footer from "./components/footer";
 import { Analytics } from "@vercel/analytics/react";
 // import ThemeSwitch from "./components/theme-switch";
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <link rel="icon" type="" href="/favicon.ico" sizes="any" />
-      <Head>
+      <head>
         <meta property="og:title" content="Sharad Bhadait" />
         <meta property="og:description" content="I like to learn new technologies to make something useful. " />
         <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQHbGy1vvHy3hQ/profile-displayphoto-shrink_200_200/B56ZUkJJNCHsAc-/0/1740068132260?e=1746057600&v=beta&t=s5PLX4_mv-WB4r5dpS01qvSis8QVN3NrrZBHPAiFKTE" />
@@ -32,7 +31,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://sharad31.vercel.app" />
 
         <meta name="google-site-verification" content="IX7gBGkaBa2Aj8zLlheHZMsiNaWki3Jyh4Lt" />
-      </Head>
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative dark:bg-gray-950 dark:text-gray-50 dark:text-opacity-90 `}
       >
