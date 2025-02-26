@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <link rel="icon" type="" href="/favicon.ico" sizes="any" />
       <head>
-        <meta name="google-site-verification" content="IX7gBGkaBa2Aj8zLlheHZMsiNaWki3Jyh4Lt-7oCuMQ" />
+        <meta name="google-site-verification" content="OqRsdsYhSt23sQqQ5Ni7iDb_D3kR4gLsF6Faf1ujTp8" />
         <meta property="og:title" content="Sharad Bhadait" />
         <meta property="og:description" content="I like to learn new technologies to make something useful. " />
         <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQHbGy1vvHy3hQ/profile-displayphoto-shrink_200_200/B56ZUkJJNCHsAc-/0/1740068132260?e=1746057600&v=beta&t=s5PLX4_mv-WB4r5dpS01qvSis8QVN3NrrZBHPAiFKTE" />
