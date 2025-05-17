@@ -8,6 +8,9 @@ import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
 import summarize from "@/public/summarize.png";
 import projecthub from "@/public/projecthubs.png";
+import invoice from "@/public/invoice-managemtn.png";
+import ecesa from "@/public/ecesa.png";
+import certifyPro from "@/public/certifyPro.png";
 
 export const links = [
   {
@@ -68,9 +71,27 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title:"Invoice Management System",
+    description:"I have created a web app for managing invoices. It's a simple app that allows you to create, edit, and delete invoices.",
+    tags:['React','tailwindcss','nodejs','expressjs','mongodb','backend GCP'],
+    imageUrl:invoice
+  },
+  {
+    title:"Ecesa",
+    description:"Developed a full-stack web platform for student enrollment in college workshops and events.",
+    tags:['React','tailwindcss','nextjs','postgres'],
+    imageUrl:ecesa
+  },
+  {
+    title:"CertifyPro",
+    description:"Built a platform to generate bulk certificates using CSV uploads and a drag-and-drop editor. Features include font customization, live preview, ZIP download.",
+    tags:['vercel'],
+    imageUrl:certifyPro
+  },
+  {
     title:"ProjectHub",
     description:"It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
-    tags:['ReactJS','tailwindcss','appwrite','backend DigitalOcean'],
+    tags:['ReactJS','tailwindcss','appwrite','DigitalOcean'],
     imageUrl:projecthub
   },
   {

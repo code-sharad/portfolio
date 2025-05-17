@@ -11,17 +11,18 @@ import "react-vertical-timeline-component/style.min.css";
 import { InView } from "react-intersection-observer";
 import useSectionInView from "@/lib/hooks";
 import { TracingBeam } from "./tracing-beam";
+import TimelineComponent from "./timeline";
 function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.3);
   return (
     <section
       ref={ref}
       id="experience"
-      className="px-6 scroll-mt-28 mb-28 sm:mb-40"
+      className="px-6 scroll-mt-28 mb-28 sm:mb-40 max-w-2xl mx-auto"
     >
       <SectionHeading>My Experience</SectionHeading>
 
-      <TracingBeam
+      {/* <TracingBeam
         className={`lg:relative  ${
           inView === true ? "visible" : "invisible"
         }   md:left-20 py-10`}
@@ -57,7 +58,9 @@ function Experience() {
             </React.Fragment>
           ))}
         </VerticalTimeline>
-      </TracingBeam>
+      </TracingBeam> */}
+
+      <TimelineComponent  />
     </section>
   );
 }
