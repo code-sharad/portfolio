@@ -50,14 +50,14 @@ export default function Component() {
                     className="mb-4 group-data-[orientation=vertical]/timeline:sm:ms-32"
                 >
                     <TimelineHeader>
-                        <TimelineSeparator />
-                        <TimelineDate className="group-data-[orientation=vertical]/timeline:sm:absolute group-data-[orientation=vertical]/timeline:sm:-left-32 group-data-[orientation=vertical]/timeline:sm:w-20 group-data-[orientation=vertical]/timeline:sm:text-right">
+                        <TimelineSeparator className="bg-gray-800 z-0" />
+                        <TimelineDate className="text-gray-900 group-data-[orientation=vertical]/timeline:sm:absolute group-data-[orientation=vertical]/timeline:sm:-left-32 group-data-[orientation=vertical]/timeline:sm:w-20 group-data-[orientation=vertical]/timeline:sm:text-right">
                             {item.date}
                         </TimelineDate>
                         <TimelineTitle className="sm:-mt-0.5 text-md">{item.title}</TimelineTitle>
-                        <TimelineIndicator />
+                        <TimelineIndicator className="border-gray-600 z-10 bg-gray-800"/>
                     </TimelineHeader>
-                    <TimelineContent className="">{item.description}</TimelineContent>
+                    <TimelineContent className="text-gray-900">{item.description}</TimelineContent>
                 </TimelineItem>
             ))}
         </Timeline>
