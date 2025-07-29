@@ -13,9 +13,9 @@ function SectionDivider() {
         delay: 0.125
       }}
     >
-      <div className='bg-black my-24 h-[1px] w-56 rounded-full hidden sm:block' />
+      <div className='bg-black my-24 h-[1px]  rounded-full min-w-24 max-w-56 sm:w-56' />
       <BsDiamond />
-      <div className='bg-black my-24 h-[1px] w-56 rounded-full hidden sm:block' />
+      <div className='bg-black my-24 h-[1px]  rounded-full min-w-24 max-w-56 sm:w-56' />
 
 
     </motion.div>
