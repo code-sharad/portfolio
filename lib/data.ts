@@ -73,25 +73,25 @@ export const projectsData = [
   {
     title:"Invoice Management System",
     description:"I have created a web app for managing invoices. It's a simple app that allows you to create, edit, and delete invoices.",
-    tags:['React','tailwindcss','nodejs','expressjs','mongodb','backend GCP'],
+    tags:['React','Tailwindcss','Nodejs','Expressjs','Mongodb','backend GCP'],
     imageUrl:invoice
   },
   {
-    title:"Ecesa",
+    title:"ECESA",
     description:"Developed a full-stack web platform for student enrollment in college workshops and events.",
-    tags:['React','tailwindcss','nextjs','postgres'],
+    tags:['React','Tailwindcss','Nextjs','PostgresSQL','Razorpay'],
     imageUrl:ecesa
   },
   {
     title:"CertifyPro",
     description:"Built a platform to generate bulk certificates using CSV uploads and a drag-and-drop editor. Features include font customization, live preview, ZIP download.",
-    tags:['vercel'],
+    tags:['Vercel','Nextjs','Tailwindcss','MongoDB','Nodejs'],
     imageUrl:certifyPro
   },
   {
     title:"ProjectHub",
     description:"It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
-    tags:['ReactJS','tailwindcss','appwrite','DigitalOcean'],
+    tags:['ReactJS','Tailwindcss','Appwrite','DigitalOcean'],
     imageUrl:projecthub
   },
   {
