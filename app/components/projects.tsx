@@ -7,10 +7,10 @@ import Project from "./project";
 
 import useSectionInView from "@/lib/hooks";
 function Projects() {
-  
-  const {ref} = useSectionInView('Projects',0.5);
+
+  const { ref } = useSectionInView('Projects', 0.1);  // Changed threshold from 0.5 to 0.1
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28">
+    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My Project</SectionHeading>
       <div>
         {projectsData.map((project, index) => (

@@ -24,21 +24,7 @@ function About() {
         <span className="flex flex-col font-serif items-center">
           {" "}
           About me{" "}
-          <svg
-            width="125"
-            height="8"
-            viewBox="0 0 125 8"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="relative bottom-1"
-          >
-            <path
-              d="M1 6.99999C16.687 3.5864 32.9688 2.50884 49.317 1.74115C75.9148 0.492128 96.8903 1.39152 123.5 4.74113"
-              stroke="#5D5D5D"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+       
         </span>
       </SectionHeading>
       <p className="mb-3">

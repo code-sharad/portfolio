@@ -102,16 +102,16 @@ function Intro() {
         <a
           href="https://www.linkedin.com/in/sharad-bhadait-378753251/"
           target="_blank"
-          className="dark:bg-white/20 border-white/60 bg-white hover:text-gray-950 text-gray-700 flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack"
+          className="dark:bg-white/20  border-white/60 bg-white hover:text-gray-950 text-gray-700 flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack"
         >
-          <BsLinkedin />
+          <BsLinkedin className="scale-125" />
         </a>
         <a
           href="https://github.com/code-sharad"
           target="_blank"
           className="dark:bg-white/20 border-white/60 bg-white  hover:text-gray-950 text-gray-700 flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack"
         >
-          <FaGithubSquare />
+          <FaGithubSquare className="scale-125" />
         </a>
       </motion.div>
     </section>

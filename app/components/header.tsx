@@ -5,16 +5,18 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-session-context";
-import { time } from "console";
 import { useState } from "react";
 
 function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
-    const [hideSign, setHideSign] = useState(false);
-    setTimeout(() => {
-      setHideSign(true);
-    },2400)
+  const [hideSign, setHideSign] = useState(false);
+
+
+  setTimeout(() => {
+    setHideSign(true);
+  }, 2400)
+
   return (
     <>
       {hideSign ? (
@@ -37,6 +39,7 @@ function Header() {
                 >
                   <Link
                     onClick={() => {
+                      console.log("Clicked on:", link.name);
                       setActiveSection(link.name);
                       setTimeOfLastClick(Date.now());
                     }}
@@ -52,7 +55,7 @@ function Header() {
                     {link.name}
                     {link.name === activeSection && (
                       <motion.span
-                        className="dark:bg-gray-800  bg-indigo-100 rounded-full absolute inset-0 -z-10"
+                        className="dark:bg-gray-800  bg-red-100 rounded-full absolute inset-0 -z-10"
                         layoutId="activeSection"
                         transition={{
                           type: "spring",
