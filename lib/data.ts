@@ -2,7 +2,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, } from "react-icons/fa";
-import { LuGraduationCap , LuBuilding} from "react-icons/lu";
+import { LuGraduationCap, LuBuilding } from "react-icons/lu";
 import corpcommentImg from "@/public/codeSharad.png";
 import rmtdevImg from "@/public/pythonprojects.png";
 import wordanalyticsImg from "@/public/airbnb.png";
@@ -11,6 +11,7 @@ import projecthub from "@/public/projecthubs.png";
 import invoice from "@/public/invoice-managemtn.png";
 import ecesa from "@/public/ecesa.png";
 import certifyPro from "@/public/certifyPro.png";
+import agent from "@/public/agent.png";
 
 export const links = [
   {
@@ -33,7 +34,7 @@ export const links = [
     name: "Experience",
     hash: "#experience",
   },
-  
+
 ] as const;
 
 export const experiencesData = [
@@ -63,7 +64,7 @@ export const experiencesData = [
     title: "Maharashtra Institute of Technology",
     location: "Chh Sambhaji Nagar, Maharashtra, India",
     description:
-      "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my 2rd year",
+      "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my final year",
     icon: React.createElement(LuGraduationCap),
     date: "2022 - present",
   },
@@ -71,28 +72,40 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title:"Invoice Management System",
-    description:"I have created a web app for managing invoices. It's a simple app that allows you to create, edit, and delete invoices.",
-    tags:['React','Tailwindcss','Nodejs','Expressjs','Mongodb','backend GCP'],
-    imageUrl:invoice
+    title: "Coding Agent",
+    description:
+      "An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Runs in a secure Vercel sandbox and is powered by GPT-4.1 with tools.",
+    tags: ["Agentic AI", "Generative AI", "GPT-4.1", "Vercel", "GitHub", "Automation"],
+    imageUrl: agent,
+    url:"https://agent31.vercel.app"
   },
   {
-    title:"ECESA",
-    description:"Developed a full-stack web platform for student enrollment in college workshops and events.",
-    tags:['React','Tailwindcss','Nextjs','PostgresSQL','Razorpay'],
-    imageUrl:ecesa
+    title: "Invoice Management System",
+    description: "I have created a web app for managing invoices. It's a simple app that allows you to create, edit, and delete invoices.",
+    tags: ['React', 'Tailwindcss', 'Nodejs', 'Expressjs', 'Mongodb', 'backend GCP'],
+    imageUrl: invoice,
+    url:"https://invoice31.vercel.app/"
   },
   {
-    title:"CertifyPro",
-    description:"Built a platform to generate bulk certificates using CSV uploads and a drag-and-drop editor. Features include font customization, live preview, ZIP download.",
-    tags:['Vercel','Nextjs','Tailwindcss','MongoDB','Nodejs'],
-    imageUrl:certifyPro
+    title: "ECESA",
+    description: "Developed a full-stack web platform for student enrollment in college workshops and events.",
+    tags: ['React', 'Tailwindcss', 'Nextjs', 'PostgresSQL', 'Razorpay'],
+    imageUrl: ecesa,
+    url:"https://ecesa2.vercel.app"
   },
   {
-    title:"ProjectHub",
-    description:"It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
-    tags:['ReactJS','Tailwindcss','Appwrite','DigitalOcean'],
-    imageUrl:projecthub
+    title: "CertifyPro",
+    description: "Built a platform to generate bulk certificates using CSV uploads and a drag-and-drop editor. Features include font customization, live preview, ZIP download.",
+    tags: ['Vercel', 'Nextjs', 'Tailwindcss', 'MongoDB', 'Nodejs'],
+    imageUrl: certifyPro,
+    url:"https://certifygen31.vercel.app/"
+  },
+  {
+    title: "ProjectHub",
+    description: "It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
+    tags: ['ReactJS', 'Tailwindcss', 'Appwrite', 'DigitalOcean'],
+    imageUrl: projecthub,
+    url:"https://projecthubs.vercel.app/"
   },
   {
     title: "Personal Accounts",
@@ -106,7 +119,7 @@ export const projectsData = [
     description:
       "I have created a web app for summarizing the text and video.",
     tags: ["React", "Langchain", "Openai", "Shadcn"],
-    imageUrl:summarize ,
+    imageUrl: summarize,
   },
   {
     title: "Python Projects",

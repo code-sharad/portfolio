@@ -42,14 +42,14 @@ function Intro() {
               duration: 0.2,
             }}
           >
-            <div className="bg-white object-cover rounded-full border-1 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
+            <div className="bg-white object-fill rounded-full border-1 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
               <Image
-                className=" transition-all  object-cover  rounded-full"
+                className=" transition-all shadow-lg shadow-stone-700 object-fill  rounded-full"
                 // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
-                src={"/profile.png"}
+                src={"/sharad.png"}
                 priority={true}
                 alt="My new Profile image"
-                quality={95}
+                // quality={95}
                 width={192}
                 height={192}
               />
@@ -93,8 +93,8 @@ function Intro() {
         </a>
         <a
           href="/Sharad_Bhadait.pdf"
-          download={"true"}
-          className="cursor-pointer borderBlack dark:bg-white/10 bg-white flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group borderBlack"
+          download={"Sharad_Bhadait"}
+          className="cursor-pointer borderBlack dark:bg-white/10 bg-white flex gap-2 justify-center items-center px-4 py-3 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group borderBlack"
         >
           Download CV
           <HiDownload className=" opacity-70 group-hover:translate-y-1 transition" />

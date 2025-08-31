@@ -24,42 +24,37 @@ function About() {
         <span className="flex flex-col font-serif items-center">
           {" "}
           About me{" "}
-       
+
         </span>
       </SectionHeading>
       <p className="mb-3">
-        I am a dedicated student currently pursuing a B.Tech degree at the
-        Maharashtra Institute of Technology. I am currently in my third year of
-        the program, and my educational journey is marked by a deep passion for
-        computer science. My primary area of focus is full-stack web
-        development, and I thrive on the creative challenges that the world of
-        programming presents.{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic ">
-          My favorite part of programming
-        </span>{" "}
-        is the problem-solving aspect. I{" "}
-        <span className="">
-          love
-        </span>{" "}
-        the feeling of finally figuring out a solution to a problem. My core
-        stack is{" "}
-        <span className="font-medium ">
-          React, Next.js, Node.js, and MongoDB{" "}
-        </span>
-        Outside of my academic and coding pursuits, I have a strong interest in
-        self-development. I find inspiration in reading books on personal growth
-        and self-improvement. These books not only expand my knowledge but also
-        help me develop a well-rounded and balanced perspective on life.{" "}
+        I’m a final-year B.Tech student at the Maharashtra Institute of
+        Technology with a strong passion for {" "}
+        <span className="font-medium">full‑stack web development</span> and
+        emerging technologies. My core stack includes {" "}
+        <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>,
+        and I enjoy building applications that balance functionality with a great
+        user experience.
+      </p>
+
+      <p className="mb-3">
+        For me, programming is all about {" "}
+        <span className="italic">problem‑solving</span>—breaking down complex
+        issues and finding elegant solutions that work in the real world. I’m
+        also exploring {" "}
+        <span className="font-medium">Agentic AI</span> and {" "}
+        <span className="font-medium">Generative AI</span>, focusing on how
+        intelligent agents and large language models can create smarter, more
+        adaptive applications. Over time, I’ve gained experience with cloud
+        technologies, Docker, and modern deployment workflows, allowing me to
+        take projects from idea to production efficiently.
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching anime. I also enjoy playing badminton and{" "}
-        <span className="font-medium">learning new things</span>.
-        {/* I am currently */}
-        {/* learning about{" "} */}
-        {/* <span className="font-medium">Constitution of India and Fitness</span>. */}
+        Beyond coding, I’m deeply interested in self‑development and often read
+        books on personal growth to sharpen my mindset and broaden my
+        perspective. I also enjoy playing badminton, exploring anime, and gaming
+        to recharge and stay creative.
       </p>
     </motion.section>
   );
