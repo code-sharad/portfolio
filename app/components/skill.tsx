@@ -38,7 +38,7 @@ function Skills() {
             // whileInView="animate"
             whileInView="animate"
             exit={{ opacity: 0 }}
-            className="bg-white/30 backdrop-blur-sm border shadow-lg border-indigo-600/[0.3] rounded-xl px-5 py-3"
+            className="bg-gray-100 lg:bg-white/30 backdrop-blur-sm border shadow-lg border-indigo-600/[0.3] rounded-xl px-5 py-3"
             key={index}
           >
             {skill}

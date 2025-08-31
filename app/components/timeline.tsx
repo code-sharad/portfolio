@@ -1,65 +1,47 @@
-import {
-    Timeline,
-    TimelineContent,
-    TimelineDate,
-    TimelineHeader,
-    TimelineIndicator,
-    TimelineItem,
-    TimelineSeparator,
-    TimelineTitle,
-} from "@/components/ui/timeline"
-import {experiencesData} from "@/lib/data"
-const items = [
-    {
-        id: 1,
-        date: "Mar 15, 2024",
-        title: "Project Kickoff",
-        description:
-            "Initial team meeting and project scope definition. Established key milestones and resource allocation.",
-    },
-    {
-        id: 2,
-        date: "Mar 22, 2024",
-        title: "Design Phase",
-        description:
-            "Completed wireframes and user interface mockups. Stakeholder review and feedback incorporated.",
-    },
-    {
-        id: 3,
-        date: "Apr 5, 2024",
-        title: "Development Sprint",
-        description:
-            "Backend API implementation and frontend component development in progress.",
-    },
-    {
-        id: 4,
-        date: "Apr 19, 2024",
-        title: "Testing & Deployment",
-        description:
-            "Quality assurance testing, performance optimization, and production deployment preparation.",
-    },
-]
+
+import React from "react";
+import { experiencesData } from "@/lib/data";
 
 export default function Component() {
     return (
-        <Timeline defaultValue={3} className="mt-16">
-            {experiencesData.map((item, index) => (
-                <TimelineItem
-                    key={item.title}
-                    step={index + 1}
-                    className="mb-4 group-data-[orientation=vertical]/timeline:sm:ms-32"
-                >
-                    <TimelineHeader>
-                        <TimelineSeparator className="bg-gray-800 z-0" />
-                        <TimelineDate className="text-gray-900 group-data-[orientation=vertical]/timeline:sm:absolute group-data-[orientation=vertical]/timeline:sm:-left-32 group-data-[orientation=vertical]/timeline:sm:w-20 group-data-[orientation=vertical]/timeline:sm:text-right">
+        <div className="relative mt-12">
+            {/* vertical line across the whole timeline */}
+            <div className="absolute left-[1rem] sm:left-[calc(10rem+1rem)] top-0 bottom-0 w-[2px] bg-stone-900 dark:bg-stone-900 pointer-events-none" />
+
+            <ul className="grid gap-y-10">
+                {experiencesData.map((item, index) => (
+                    <li
+                        key={`${item.title}-${index}`}
+                        className="grid grid-cols-[2rem_1fr] sm:grid-cols-[10rem_2rem_1fr] items-start gap-x-4"
+                    >
+                        {/* date (desktop) */}
+                        <div className="hidden sm:block text-sm text-stone-900 text-right pr-2">
                             {item.date}
-                        </TimelineDate>
-                        <TimelineTitle className="sm:-mt-0.5 text-md">{item.title}</TimelineTitle>
-                        <TimelineIndicator className="border-gray-600 z-10 bg-gray-800"/>
-                    </TimelineHeader>
-                    <TimelineContent className="text-gray-900">{item.description}</TimelineContent>
-                </TimelineItem>
-            ))}
-        </Timeline>
-    )
+                        </div>
+
+                        {/* axis column with dot */}
+                        <div className="relative h-4">
+                            <div className="absolute left-1/2 lg:left-0 -translate-x-1/2 top-0 w-4 h-4 rounded-full border-2 border-stone-600 dark:border-stone-900 bg-stone-900 z-10" />
+                        </div>
+
+                        {/* content */}
+                        <div className="col-start-2 sm:col-start-3">
+                            {/* date (mobile) */}
+                            <p className="sm:hidden text-xs text-gray-500 mb-1">{item.date}</p>
+
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+                                {item.title}
+                            </h3>
+                            {item.location ? (
+                                <p className="text-xs text-stone-800 mt-0.5">{item.location}</p>
+                            ) : null}
+                            <p className="mt-2 rounded-lg   p-4 text-gray-700">
+                                {item.description}
+                            </p>
+                        </div>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }

@@ -134,7 +134,7 @@ function TimelineIndicator({
     <div
       data-slot="timeline-indicator"
       className={cn(
-        "border-primary/20 group-data-completed/timeline-item:border-primary absolute size-4 rounded-full border-2 group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:left-0 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:top-0 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:-translate-x-1/2",
+        "absolute size-4 rounded-full border-2 border-gray-300 group-data-completed/timeline-item:border-gray-700 dark:border-gray-600 dark:group-data-completed/timeline-item:border-gray-300 group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:left-0 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:top-0 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:-translate-x-1/2 z-10 bg-white",
         className
       )}
       aria-hidden="true"
@@ -157,7 +157,7 @@ function TimelineItem({ step, className, ...props }: TimelineItemProps) {
     <div
       data-slot="timeline-item"
       className={cn(
-        "group/timeline-item has-[+[data-completed]]:[&_[data-slot=timeline-separator]]:bg-primary relative flex flex-1 flex-col gap-0.5 group-data-[orientation=horizontal]/timeline:mt-8 group-data-[orientation=horizontal]/timeline:not-last:pe-8 group-data-[orientation=vertical]/timeline:ms-8 group-data-[orientation=vertical]/timeline:not-last:pb-12",
+        "group/timeline-item has-[+[data-completed]]:[&_[data-slot=timeline-separator]]:bg-gray-400 dark:has-[+[data-completed]]:[&_[data-slot=timeline-separator]]:bg-gray-600 relative flex flex-1 flex-col gap-0.5 group-data-[orientation=horizontal]/timeline:mt-8 group-data-[orientation=horizontal]/timeline:not-last:pe-8 group-data-[orientation=vertical]/timeline:ms-8 group-data-[orientation=vertical]/timeline:not-last:pb-12 group-data-[orientation=vertical]/timeline:before:content-[''] group-data-[orientation=vertical]/timeline:before:absolute group-data-[orientation=vertical]/timeline:before:top-0 group-data-[orientation=vertical]/timeline:before:bottom-0 group-data-[orientation=vertical]/timeline:before:-left-6 group-data-[orientation=vertical]/timeline:before:w-0.5 group-data-[orientation=vertical]/timeline:before:bg-gray-300 dark:group-data-[orientation=vertical]/timeline:before:bg-gray-700 group-last/timeline-item:before:hidden",
         className
       )}
       data-completed={step <= activeStep || undefined}
@@ -175,7 +175,7 @@ function TimelineSeparator({
     <div
       data-slot="timeline-separator"
       className={cn(
-        "bg-primary/10 absolute self-start group-last/timeline-item:hidden group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:h-0.5 group-data-[orientation=horizontal]/timeline:w-[calc(100%-1rem-0.25rem)] group-data-[orientation=horizontal]/timeline:translate-x-4.5 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:h-[calc(100%-1rem-0.25rem)] group-data-[orientation=vertical]/timeline:w-0.5 group-data-[orientation=vertical]/timeline:-translate-x-1/2 group-data-[orientation=vertical]/timeline:translate-y-4.5",
+        "absolute self-start group-last/timeline-item:hidden z-[1] bg-gray-300 dark:bg-gray-700 pointer-events-none group-data-[orientation=horizontal]/timeline:-top-6 group-data-[orientation=horizontal]/timeline:h-0.5 group-data-[orientation=horizontal]/timeline:w-[calc(100%-1rem-0.25rem)] group-data-[orientation=horizontal]/timeline:translate-x-4.5 group-data-[orientation=horizontal]/timeline:-translate-y-1/2 group-data-[orientation=vertical]/timeline:-left-6 group-data-[orientation=vertical]/timeline:top-0 group-data-[orientation=vertical]/timeline:bottom-0 group-data-[orientation=vertical]/timeline:w-0.5 group-data-[orientation=vertical]/timeline:-translate-x-1/2",
         className
       )}
       aria-hidden="true"

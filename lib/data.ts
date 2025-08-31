@@ -41,14 +41,14 @@ export const experiencesData = [
   {
     title: "Orchid English School",
     location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description: "I have done my Schooling from Orchid English School.",
+    description: "",
     icon: React.createElement(LuGraduationCap),
     date: "2015 - 2020",
   },
   {
     title: "Orchid Techo College",
     location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description: "I have completed by 11th and 12th.",
+    description: "",
     icon: React.createElement(LuGraduationCap),
     date: "2020 - 2022",
   },

@@ -28,11 +28,11 @@ function Project(props: ProjectProps) {
       }}
       className="sm:mb-8 mb-3 group"
     >
-      <section className="relative max-w-[42rem] mb-28 overflow-hidden rounded-xl border border-black/5 bg-white/60 backdrop-blur-sm shadow-md transition hover:bg-white/80 hover:shadow-xl ring-1 ring-black/5 sm:pr-8 sm:group-even:pl-8">
+      <section className="relative max-w-[42rem] mb-28 overflow-hidden rounded-xl border border-black/5 bg-gray-100 lg:bg-white/60 lg:backdrop-blur-sm shadow-md transition hover:bg-white/80 hover:shadow-xl ring-1 ring-black/5 sm:pr-8 sm:group-even:pl-8">
         <div className="py-5 pb-7 px-5 sm:pl-10 sm:pr-6 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem] gap-2">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-2xl font-semibold tracking-tight text-gray-900">{title}</h3>
-           
+
           </div>
           <p className="mt-1 leading-relaxed text-gray-700">{description}</p>
           <ul className="flex flex-wrap mt-3 gap-2 sm:mt-auto">
