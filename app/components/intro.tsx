@@ -44,7 +44,7 @@ function Intro() {
           >
             <div className="bg-white object-fill rounded-full border-1 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
               <Image
-                className=" transition-all shadow-lg shadow-stone-700 object-fill  rounded-full"
+                className=" transition-all shadow-lg shadow-indigo-200 object-fill  rounded-full"
                 // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
                 src={"/sharad.png"}
                 priority={true}
