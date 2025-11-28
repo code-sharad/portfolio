@@ -66,7 +66,7 @@ function Intro() {
                   height="192"
                   quality="95"
                   priority={true}
-                  className="h-24 w-24 rounded-[1.5rem] object-cover border-[0.35rem] border-white shadow-xl shadow-black/10 sm:h-[10rem] sm:w-[10rem] sm:rounded-[2.5rem] dark:border-stone-900/50 dark:shadow-black/40"
+                  className="h-24 w-24 rounded-[1.5rem] object-cover border-[0.35rem] border-stone-50 shadow-xl shadow-black/10 sm:h-[10rem] sm:w-[10rem] sm:rounded-[2.5rem] dark:border-stone-900/50 dark:shadow-black/40"
                 />
               </div>
               {/* Decorative background blur for depth */}
@@ -128,7 +128,7 @@ function Intro() {
           <a
             href="/Sharad_Bhadait.pdf"
             download={"Sharad_Bhadait"}
-            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none transition cursor-pointer borderBlack dark:bg-white/10 shadow-lg shadow-black/[0.05]"
+            className="group bg-stone-50 px-7 py-3 flex items-center gap-2 rounded-full outline-none transition cursor-pointer borderBlack dark:bg-white/10 shadow-lg shadow-black/[0.05]"
           >
             Download CV
             <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -139,7 +139,7 @@ function Intro() {
           <a
             href="https://www.linkedin.com/in/sharad-bhadait-378753251/"
             target="_blank"
-            className="bg-white p-4 text-stone-700 hover:text-stone-950 flex items-center gap-2 rounded-full transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
+            className="bg-stone-50 p-4 text-stone-700 hover:text-stone-950 flex items-center gap-2 rounded-full transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
           >
             <BsLinkedin />
           </a>
@@ -149,7 +149,7 @@ function Intro() {
           <a
             href="https://github.com/code-sharad"
             target="_blank"
-            className="bg-white p-4 text-stone-700 flex items-center gap-2 text-[1.35rem] rounded-full hover:text-stone-950 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
+            className="bg-stone-50 p-4 text-stone-700 flex items-center gap-2 text-[1.35rem] rounded-full hover:text-stone-950 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
           >
             <FaGithubSquare />
           </a>
