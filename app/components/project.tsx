@@ -28,16 +28,28 @@ function Project(props: ProjectProps) {
         scale: scaleProgress,
         opacity: scaleOpacity,
       }}
-      className="sm:mb-8 mb-3 group"
+      className="group sm:mb-8 last:mb-0 sm:last:mb-8 w-[85vw] sm:w-full flex-shrink-0 snap-center flex flex-col"
     >
-      <section className="relative max-w-[42rem] mb-28 overflow-hidden rounded-xl border border-black/5 bg-white transition hover:shadow-xl ring-1 ring-black/5 sm:pr-8 sm:group-even:pl-8 dark:bg-stone-900 dark:border-white/10 dark:text-white">
-        <div className="py-5 pb-7 px-5 sm:pl-10 sm:pr-6 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem] gap-2">
+      <section className="relative bg-white max-w-[42rem] border border-black/5 rounded-xl overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-stone-900 dark:border-white/10 dark:hover:bg-stone-800 flex-1 flex flex-col">
+        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem] flex-grow">
+
+          {/* Mobile Image */}
+          {imageUrl ? (
+             <div className="block sm:hidden mb-4 rounded-lg overflow-hidden shadow-md">
+               <Image
+                 src={imageUrl}
+                 alt={title}
+                 quality={95}
+                 className="w-full h-auto object-cover"
+               />
+             </div>
+          ) : null}
+
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-2xl font-semibold tracking-tight text-stone-900 dark:text-stone-100">{title}</h3>
-
           </div>
-          <p className="mt-1 leading-relaxed text-stone-700 dark:text-stone-200">{description}</p>
-          <ul className="flex flex-wrap mt-3 gap-2 sm:mt-auto">
+          <p className="mt-2 leading-relaxed text-stone-700 dark:text-stone-200">{description}</p>
+          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
                 className="bg-stone-900/80 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:bg-white/10 dark:text-white/70"
@@ -60,17 +72,28 @@ function Project(props: ProjectProps) {
               </a>
             </div>
           ) : null}
-          {imageUrl ? (
-            <motion.div style={{ y: yProgress }} className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl sm:group-even:-right-[initial] sm:group-even:-left-40 group-hover:-translate-x-3 group-hover:translate-y-3 groupt-hover:-rotate-10 group-hover:scale-[1.04] transition">
+        </div>
+
+        {/* Desktop Image */}
+        {imageUrl ? (
             <Image
               src={imageUrl}
               alt={title}
               quality={95}
-              className="w-full h-auto rounded-t-lg"
+              className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+              transition
+              group-hover:scale-[1.04]
+              group-hover:-translate-x-3
+              group-hover:translate-y-3
+              group-hover:-rotate-2
+
+              group-even:group-hover:translate-x-3
+              group-even:group-hover:translate-y-3
+              group-even:group-hover:rotate-2
+
+              group-even:right-[initial] group-even:-left-40"
             />
-            </motion.div>
-          ) : null}{" "}
-        </div>
+        ) : null}
       </section>
     </motion.div>
   );
