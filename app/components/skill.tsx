@@ -29,7 +29,7 @@ function Skills() {
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap  justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap  justify-center gap-2 text-lg text-stone-800 dark:text-stone-200">
         {skillsData.map((skill, index) => (
           <motion.li
             variants={fadeInAnimationVarients}
@@ -38,7 +38,7 @@ function Skills() {
             // whileInView="animate"
             whileInView="animate"
             exit={{ opacity: 0 }}
-            className="bg-gray-100 lg:bg-white/30 backdrop-blur-sm border shadow-lg border-indigo-600/[0.3] rounded-xl px-5 py-3"
+            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-stone-900 dark:text-stone-200 dark:border-white/10"
             key={index}
           >
             {skill}

@@ -10,7 +10,7 @@
   @apply items-center flex flex-col w-[280px];
 } */
 .container {
-  @apply h-[312px] transition-transform duration-[250ms] ease-in-out w-[400px] rounded-[50%] scale-[0.48] after:bg-[#f2f2f2] after:content-[""] after:h-2.5 after:absolute after:w-full after:top-[390px] hover:scale-[0.54];
+  @apply h-[312px] transition-transform duration-300 ease-in-out w-[400px] rounded-[50%] scale-[0.48] after:bg-[#f2f2f2] after:content-[""] after:h-2.5 after:absolute after:w-full after:top-[390px] hover:scale-[0.54];
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -68,7 +68,7 @@
 
 @layer base {
   :root {
-        --background: 0 0% 100%;
+        --background: 28 25% 96%; /* Stone 100 */
         --foreground: 240 10% 3.9%;
         --card: 0 0% 100%;
         --card-foreground: 240 10% 3.9%;
@@ -97,8 +97,8 @@
 
     }
   .dark {
-        --background: 240 10% 3.9%;
-        --foreground: 0 0% 98%;
+        --background: 28 10% 10%; /* Stone 950 */
+        --foreground: 60 9.1% 97.8%; /* Stone 50 */
         --card: 240 10% 3.9%;
         --card-foreground: 0 0% 98%;
         --popover: 240 10% 3.9%;

@@ -15,27 +15,27 @@ export default function Component() {
                         className="grid grid-cols-[2rem_1fr] sm:grid-cols-[10rem_2rem_1fr] items-start gap-x-4"
                     >
                         {/* date (desktop) */}
-                        <div className="hidden sm:block text-sm text-stone-900 text-right pr-2">
+                        <div className="hidden sm:block text-sm text-stone-900 dark:text-stone-300 text-right pr-2">
                             {item.date}
                         </div>
 
                         {/* axis column with dot */}
                         <div className="relative h-4">
-                            <div className="absolute left-1/2 lg:left-0 -translate-x-1/2 top-0 w-4 h-4 rounded-full border-2 border-stone-600 dark:border-stone-900 bg-stone-900 z-10" />
+                            <div className="absolute left-1/2 lg:left-0 -translate-x-1/2 top-0 w-4 h-4 rounded-full border-2 border-stone-600 dark:border-stone-400 bg-stone-900 dark:bg-stone-100 z-10" />
                         </div>
 
                         {/* content */}
                         <div className="col-start-2 sm:col-start-3">
                             {/* date (mobile) */}
-                            <p className="sm:hidden text-xs text-gray-500 mb-1">{item.date}</p>
+                            <p className="sm:hidden text-xs text-stone-500 dark:text-stone-400 mb-1">{item.date}</p>
 
-                            <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+                            <h3 className="text-base sm:text-lg font-semibold text-stone-900 dark:text-stone-100">
                                 {item.title}
                             </h3>
                             {item.location ? (
-                                <p className="text-xs text-stone-800 mt-0.5">{item.location}</p>
+                                <p className="text-xs text-stone-800 dark:text-stone-300 mt-0.5">{item.location}</p>
                             ) : null}
-                            <p className="mt-2 rounded-lg   p-4 text-gray-700">
+                            <p className="mt-2 rounded-lg   p-4 text-stone-700 dark:text-stone-300">
                                 {item.description}
                             </p>
                         </div>

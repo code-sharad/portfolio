@@ -12,6 +12,8 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-session-context";
 import useSectionInView from "@/lib/hooks";
 
+import MagneticButton from "./magnetic-button";
+
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
 
@@ -26,6 +28,19 @@ function Intro() {
       window.location.href = gmailWebUrl;
     }, 100);
   };
+
+  const animation = {
+    initial: { y: "100%" },
+    enter: (i: number) => ({
+      y: "0",
+      transition: {
+        duration: 0.75,
+        ease: [0.33, 1, 0.68, 1],
+        delay: 0.075 * i,
+      },
+    }),
+  };
+
   return (
     <section
       ref={ref}
@@ -42,17 +57,20 @@ function Intro() {
               duration: 0.2,
             }}
           >
-            <div className="bg-white object-fill rounded-full border-1 md:h-[192px] md:w-[190px]   shadow-lg bg-opacity-30  shadow-black/[0.03] sm:h-32 sm:w-32">
-              <Image
-                className=" transition-all shadow-lg shadow-indigo-200 object-fill  rounded-full"
-                // src={"https://avatars.githubusercontent.com/u/61672294?v=4"}
-                src={"/sharad.png"}
-                priority={true}
-                alt="My new Profile image"
-                // quality={95}
-                width={192}
-                height={192}
-              />
+            <div className="relative">
+              <div className="z-10 relative">
+                <Image
+                  src="/sharad.png"
+                  alt="Sharad portrait"
+                  width="192"
+                  height="192"
+                  quality="95"
+                  priority={true}
+                  className="h-24 w-24 rounded-[1.5rem] object-cover border-[0.35rem] border-white shadow-xl shadow-black/10 sm:h-[10rem] sm:w-[10rem] sm:rounded-[2.5rem] dark:border-stone-900/50 dark:shadow-black/40"
+                />
+              </div>
+              {/* Decorative background blur for depth */}
+              <div className="absolute inset-0 -z-10 bg-stone-200/50 blur-2xl rounded-full dark:bg-stone-800/50 transform scale-110"></div>
             </div>
           </motion.div>
           <motion.span
@@ -68,15 +86,27 @@ function Intro() {
           ></motion.span>
         </div>
       </div>
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-3xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <span className="font-bold ">Hello, I'm Sharad.</span> I'm a student{" "}
-        <span className="font-bold"></span> I enjoy building{" "}
-        <span className="italic">sites & apps</span>.
-      </motion.h1>
+
+      <div className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl overflow-hidden">
+        <motion.div
+          variants={animation}
+          initial="initial"
+          animate="enter"
+          custom={0}
+        >
+          <span className="font-bold">Hello, I'm <span className="text-gradient">Sharad.</span></span>
+        </motion.div>
+        <motion.div
+          variants={animation}
+          initial="initial"
+          animate="enter"
+          custom={1}
+        >
+          I'm a student <span className="font-bold"></span> I enjoy building{" "}
+          <span className="italic">sites & apps</span>.
+        </motion.div>
+      </div>
+
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 font-medium"
         initial={{ opacity: 0, y: 100 }}
@@ -85,34 +115,45 @@ function Intro() {
           delay: 0.1,
         }}
       >
-        <a href="mailto:codesharad@gmail.com">
-          <span className="bg-gray-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group">
-            <button type="submit">Contact me here </button>
-            <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition " />
-          </span>
-        </a>
-        <a
-          href="/Sharad_Bhadait.pdf"
-          download={"Sharad_Bhadait"}
-          className="cursor-pointer borderBlack dark:bg-white/10 bg-white flex gap-2 justify-center items-center px-4 py-3 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group borderBlack"
-        >
-          Download CV
-          <HiDownload className=" opacity-70 group-hover:translate-y-1 transition" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/sharad-bhadait-378753251/"
-          target="_blank"
-          className="dark:bg-white/20  border-white/60 bg-white hover:text-gray-950 text-gray-700 flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-110 hover:scale-110  active:scale-105 transition borderBlack"
-        >
-          <BsLinkedin className="scale-125" />
-        </a>
-        <a
-          href="https://github.com/code-sharad"
-          target="_blank"
-          className="dark:bg-white/20 border-white/60 bg-white  hover:text-gray-950 text-gray-700 flex gap-2 justify-center items-center p-4 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition borderBlack"
-        >
-          <FaGithubSquare className="scale-125" />
-        </a>
+        <MagneticButton>
+          <a href="mailto:codesharad@gmail.com">
+            <span className="bg-stone-900 text-white px-7 py-3 flex gap-2 items-center justify-center rounded-full outline-none hover:bg-stone-950 transition group shadow-lg shadow-black/[0.1] dark:bg-stone-800 dark:text-white/90 dark:border-white/10 border border-transparent">
+              <button type="submit">Contact me here </button>
+              <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition " />
+            </span>
+          </a>
+        </MagneticButton>
+
+        <MagneticButton>
+          <a
+            href="/Sharad_Bhadait.pdf"
+            download={"Sharad_Bhadait"}
+            className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none transition cursor-pointer borderBlack dark:bg-white/10 shadow-lg shadow-black/[0.05]"
+          >
+            Download CV
+            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          </a>
+        </MagneticButton>
+
+        <MagneticButton>
+          <a
+            href="https://www.linkedin.com/in/sharad-bhadait-378753251/"
+            target="_blank"
+            className="bg-white p-4 text-stone-700 hover:text-stone-950 flex items-center gap-2 rounded-full transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
+          >
+            <BsLinkedin />
+          </a>
+        </MagneticButton>
+
+        <MagneticButton>
+          <a
+            href="https://github.com/code-sharad"
+            target="_blank"
+            className="bg-white p-4 text-stone-700 flex items-center gap-2 text-[1.35rem] rounded-full hover:text-stone-950 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/90 shadow-lg shadow-black/[0.05]"
+          >
+            <FaGithubSquare />
+          </a>
+        </MagneticButton>
       </motion.div>
     </section>
   );
