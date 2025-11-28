@@ -21,7 +21,7 @@ function Projects() {
         </svg>
       </div>
 
-      <div className="flex w-full overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-4 px-4 sm:grid sm:overflow-visible sm:gap-0 sm:pb-0 sm:mx-0 sm:px-0 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <div className="flex w-full overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-4 px-4 sm:grid sm:overflow-visible sm:gap-0 sm:pb-0 sm:mx-0 sm:px-0 scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:justify-center sm:flex sm:flex-col sm:items-center">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />
