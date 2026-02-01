@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact, } from "react-icons/fa";
@@ -56,9 +55,17 @@ export const experiencesData = [
     title: "Arohi Softwares",
     location: "Remote, India",
     description:
-      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using react.js, tailwindcss, framer-motion for Arohi Softwares. Developed the backend and video transcoding system for thc Learning Managcmcnt Systcm (LLMS) using Express.js, AWS S3, and CloudFront. Containerized EMS and LMS by creating Docker images and deployed them to Amazon ECS for scalable and efficient management.",
+      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using re[...]
     icon: React.createElement(LuBuilding),
     date: "June 2024 - Sept 2024",
+  },
+  {
+    title: "Full Stack Developer",
+    location: "TechlyAssist",
+    description:
+      "Developed end-to-end Stripe payment integration with automated subscription management, JWT authentication, and RESTful API architecture for user onboarding. Integrated 5+ third-party OAuth services (Slack, Gmail, Trello, GitHub, Jira) with secure token encryption, asynchronous job processing using BullMQ, and error handling. Implemented LangSmith monitoring framework for AI agent diagnostics, reducing troubleshooting time by 60% through real-time tracing and performance analytics.",
+    icon: React.createElement(CgWorkAlt),
+    date: "October 2025 – Present",
   },
   {
     title: "Maharashtra Institute of Technology",
@@ -74,7 +81,7 @@ export const projectsData = [
   {
     title: "Coding Agent",
     description:
-      "An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Runs in a secure Vercel sandbox and is powered by GPT-4.1 with tools.",
+      "An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Runs in a secure Vercel sandbox and is powered by GPT-4.1 with too[...]
     tags: ["Agentic AI", "Generative AI", "GPT-4.1", "Vercel", "GitHub", "Automation"],
     imageUrl: agent,
     url:"https://agent31.vercel.app"
