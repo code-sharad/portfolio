@@ -11,6 +11,9 @@ import invoice from "@/public/invoice-managemtn.png";
 import ecesa from "@/public/ecesa.png";
 import certifyPro from "@/public/certifyPro.png";
 import agent from "@/public/agent.png";
+import pdfQaRag from "@/public/agent.png";
+import appointmentBooking from "@/public/invoice-managemtn.png";
+import formGenerator from "@/public/certifyPro.png";
 
 export const links = [
   {
@@ -55,7 +58,7 @@ export const experiencesData = [
     title: "Arohi Softwares",
     location: "Remote, India",
     description:
-      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using re[...]
+      "Built the frontend and backend for the Employee Management System (EMS).Developed product pages, categories, and filters for Apna Bazar. Designed and built the company website's UI using React.",
     icon: React.createElement(LuBuilding),
     date: "June 2024 - Sept 2024",
   },
@@ -81,10 +84,31 @@ export const projectsData = [
   {
     title: "Coding Agent",
     description:
-      "An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Runs in a secure Vercel sandbox and is powered by GPT-4.1 with too[...]
+      "An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Runs in a secure Vercel sandbox and is powered by GPT-4.1 with tools for code editing, testing, and GitHub integration.",
     tags: ["Agentic AI", "Generative AI", "GPT-4.1", "Vercel", "GitHub", "Automation"],
     imageUrl: agent,
     url:"https://agent31.vercel.app"
+  },
+  {
+    title: "PDF Q&A Chat Application",
+    description: "A modern, real-time PDF question-answering application featuring AI-powered document analysis with streaming responses. Upload PDFs and ask questions to get intelligent answers using advanced semantic search and vector embeddings.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "OpenAI", "LangChain", "Pinecone", "Vercel AI SDK"],
+    imageUrl: pdfQaRag,
+    url: "https://chat31.vercel.app"
+  },
+  {
+    title: "AI-Powered Form Generator",
+    description: "An intelligent form builder that generates custom forms from natural language prompts. Features drag-and-drop form builder, real-time preview, submission analytics dashboard, and Cloudinary integration for file uploads.",
+    tags: ["Next.js", "TypeScript", "Tailwind", "shadcn/ui", "Express", "MongoDB", "JWT", "Cloudinary", "Recharts"],
+    imageUrl: formGenerator,
+    url: "https://form-generator31.vercel.app"
+  },
+  {
+    title: "Appointment Booking System",
+    description: "A full-stack appointment booking platform with Google Calendar integration, timezone support, and role-based management. Features real-time booking, automated calendar sync with Google Meet links, and OAuth authentication.",
+    tags: ["Next.js", "TypeScript", "NextAuth.js", "PostgreSQL", "Drizzle ORM", "Tailwind", "Google Calendar API"],
+    imageUrl: appointmentBooking,
+    url: "https://appointment-booking2.vercel.app"
   },
   {
     title: "Invoice Management System",
