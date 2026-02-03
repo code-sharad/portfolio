@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { GridBackground } from "./components/grid-background";
 import ThemeContextProvider from "@/context/theme-context";
 import ThemeSwitch from "./components/theme-switch";
+import SplashScreen from "./components/splash-screen";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         {/* <div className="bg-[#fbb183b9]  fixed opacity-40 top-[1rem] -z-08 right-[9rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.7rem] dark:bg-[#ffc1b0]"></div> */}
         <ThemeContextProvider>
           <ActiveSessionContextProvider>
+            <SplashScreen />
             <Header />
             <GridBackground>
               {children}

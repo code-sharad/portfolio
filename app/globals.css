@@ -104,6 +104,15 @@
   }
 }
 
+/* Grid Pattern Utilities (previously defined in tailwind.config.ts plugin, now CSS-based for v4 compatibility) */
+.bg-grid-black {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(0,0,0,0.08)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
+.bg-grid-white {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgba(255,255,255,0.05)'%3E%3Cpath d='M0 .5H31.5V32'/%3E%3C/svg%3E");
+}
+
 @layer components {
     .borderBlack {
         @apply border border-black/10;

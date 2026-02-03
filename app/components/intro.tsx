@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useSectionInView from "@/lib/hooks";
+import { SectionGrid } from "./grid-background";
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -12,8 +13,9 @@ function Intro() {
     <section
       ref={ref}
       id="home"
-      className="min-h-[65vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem] mb-16"
+      className="min-h-[85vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem] relative"
     >
+      <SectionGrid />
       {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
