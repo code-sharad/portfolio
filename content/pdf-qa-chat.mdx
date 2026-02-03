@@ -1,0 +1,173 @@
+# PDF Q&A Chat Application
+
+A modern, real-time PDF question-answering application featuring AI-powered document analysis with streaming responses. Upload PDFs and ask questions to get intelligent answers using advanced semantic search and vector embeddings.
+
+## Overview
+
+This application transforms how you interact with PDF documents. Simply upload a PDF and start asking questions – the AI will search through the document and provide accurate, contextual answers in real-time.
+
+## Key Features
+
+- **Real-time Streaming** – Answers stream in as they're generated for a responsive feel
+- **Semantic Search** – Uses vector embeddings for intelligent document retrieval
+- **Multi-document Support** – Upload and query multiple PDFs simultaneously
+- **Source Citations** – Answers include references to specific document sections
+- **Dark Mode** – Beautiful, modern UI with dark/light theme support
+
+## Tech Stack
+
+- **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
+- **AI**: OpenAI GPT-4 with streaming
+- **Vector Database**: Pinecone for fast similarity search
+- **Embeddings**: OpenAI text-embedding-ada-002
+- **Framework**: LangChain for RAG orchestration
+- **Streaming**: Vercel AI SDK
+
+## Architecture
+
+```
+User Query → Embedding → Pinecone Search → Context Building → GPT-4 → Streaming Response
+```
+
+### Key Components
+
+1. **Document Processing** – PDFs are chunked and embedded on upload
+2. **Retrieval** – Relevant chunks are fetched using semantic similarity
+3. **Generation** – GPT-4 synthesizes answers from retrieved context
+4. **Streaming** – Responses are streamed token-by-token to the client
+
+---
+
+*Powered by RAG (Retrieval Augmented Generation) for accurate, grounded responses.*
+# PDF Q&A Chat Application
+
+A modern, real-time PDF question-answering application built with Next.js, featuring AI-powered document analysis, streaming responses, and a sleek black-and-white UI.
+
+## Demo Video
+![demo](https://github.com/user-attachments/assets/96c564e6-ada8-4d39-9c3b-a3080d26670f)
+
+## Website Link
+[PDF Q&A App](https://pdf-qa-rag.vercel.app/)
+API Token: `hello`
+
+
+## Features
+
+- 📄 **PDF Upload & Processing**: Upload PDFs and extract content for analysis
+- 🤖 **AI-Powered Q&A**: Ask questions about your PDFs and get intelligent answers
+- ⚡ **Real-time Streaming**: See answers generate in real-time with streaming responses
+- 🎨 **Modern UI**: Clean, responsive design with black-and-white theme
+- 🔒 **Secure**: Token-based authentication for API routes
+- 📱 **Mobile Friendly**: Responsive design that works on all devices
+- 🔍 **Vector Search**: Advanced semantic search using embeddings and Pinecone
+
+## Tech Stack
+
+- **Frontend**: Next.js 15, React 19, TypeScript, Tailwind CSS
+- **AI/ML**: OpenAI GPT, LangChain, Vercel AI SDK
+- **Vector Database**: Pinecone
+- **File Storage**: Vercel Blob
+- **UI Components**: Lucide React icons, React Markdown
+- **Authentication**: Token-based API protection
+
+## Architecture
+<img width="1446" height="877" alt="architecture" src="https://github.com/user-attachments/assets/022cb48c-95fd-452c-8054-bac207e583e5" />
+
+**Data Flow:**
+1. **PDF Processing**: Upload → Text extraction → Chunking → Embedding generation
+2. **Query Processing**: User question → Vector search → Context retrieval
+3. **Response Generation**: Context + Question → LLM → Streaming response
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js 18+
+- pnpm (recommended) or npm
+- Git
+
+You'll also need accounts and API keys for:
+
+- [OpenAI](https://platform.openai.com/) (for GPT and embeddings)
+- [Pinecone](https://www.pinecone.io/) (for vector database)
+- [Vercel](https://vercel.com/) (for blob storage)
+
+## Quick Start
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd pdf-qa-app
+```
+
+### 2. Install Dependencies
+
+```bash
+# Using pnpm (recommended)
+pnpm install
+
+# Or using npm
+npm install
+```
+
+### 3. Environment Configuration
+
+Create a `.env.local` file in the root directory and add the following environment variables:
+
+```bash
+# API Protection
+API_SECRET=your-secure-api-secret-here
+
+# OpenAI Configuration
+OPENAI_API_KEY=your-openai-api-key-here
+
+# Pinecone Configuration
+PINECONE_API_KEY=your-pinecone-api-key-here
+PINECONE_INDEX_NAME=your-pinecone-index-name
+PINECONE_ENVIRONMENT=your-pinecone-environment
+
+# Vercel Blob Storage
+BLOB_READ_WRITE_TOKEN=your-vercel-blob-token-here
+```
+
+### 4. Set Up Pinecone Index
+
+1. Log in to your [Pinecone console](https://app.pinecone.io/)
+2. Create a new index with the following settings:
+   - **Dimensions**: 1536 (for OpenAI text-embedding-3-small)
+   - **Metric**: cosine
+   - **Environment**: Choose your preferred region
+
+### 5. Run the Development Server
+
+```bash
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+
+## Usage
+
+### 1. Initial Setup
+- When you first visit the app, you'll be prompted to enter your API token
+- This token should match the `API_SECRET=hello` environment variable
+- The token is stored locally in your browser
+
+### 2. Upload a PDF
+- Click the upload button (📎) in the chat input
+- Select a PDF file from your device
+- Wait for the processing confirmation
+
+### 3. Ask Questions
+- Type your question about the uploaded PDF
+- Press Enter or click the send button
+- Watch as the AI generates a streaming response
+
+### 4. Features
+- **Multiple PDFs**: Upload multiple PDFs to build a knowledge base
+- **Conversation History**: Previous questions and answers are preserved
+- **Real-time Responses**: See answers generate word by word
+- **Markdown Support**: Responses support rich formatting
+

@@ -1,0 +1,42 @@
+# Coding Agent
+
+An AI-powered coding assistant that reads your codebase, edits files intelligently, and opens pull requests automatically. Built with GPT-4.1 and runs in a secure Vercel sandbox environment.
+
+## Overview
+
+This project showcases the power of modern AI combined with software engineering best practices. The Coding Agent can understand complex codebases, suggest improvements, and even implement changes autonomously.
+
+## Key Features
+
+- **Intelligent Code Analysis** – Deep understanding of your codebase using advanced language models
+- **Automated File Editing** – Makes precise, context-aware edits to your code
+- **Pull Request Automation** – Creates and manages PRs directly on GitHub
+- **Secure Sandbox Execution** – Runs safely in Vercel's isolated environment
+- **Real-time Collaboration** – Watch the AI work in real-time as it processes your requests
+
+## Tech Stack
+
+- **AI Model**: GPT-4.1 with function calling
+- **Runtime**: Vercel Serverless Functions
+- **Integration**: GitHub API for PR management
+- **Frontend**: Next.js with TypeScript
+
+## How It Works
+
+1. Connect your GitHub repository
+2. Describe the changes you want to make
+3. The agent analyzes your codebase
+4. Review and approve the suggested changes
+5. PR is automatically created
+
+## Architecture
+
+The system uses a multi-step pipeline:
+- **Code Parsing** – AST-based analysis for accurate code understanding
+- **Context Building** – Relevant files and dependencies are gathered
+- **Change Planning** – AI plans the modifications step by step
+- **Execution** – Changes are applied with full version control
+
+---
+
+*Built with passion for developer productivity and AI-assisted development.*

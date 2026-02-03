@@ -145,3 +145,73 @@
 
 
 }
+
+/* Custom Scrollbar - Attio-inspired minimal design */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(168 162 158 / 0.4); /* stone-400 with opacity */
+  border-radius: 100px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(120 113 108 / 0.6); /* stone-500 with opacity */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: rgb(87 83 78 / 0.5); /* stone-600 with opacity */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgb(120 113 108 / 0.7); /* stone-500 with opacity */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(168 162 158 / 0.4) transparent;
+}
+
+.dark * {
+  scrollbar-color: rgb(87 83 78 / 0.5) transparent;
+}
+
+/* Hide scrollbar on scroll containers when not hovering (optional - more minimal) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scrollbar that appears on hover */
+.scrollbar-auto::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.scrollbar-auto:hover::-webkit-scrollbar-thumb {
+  background: rgb(168 162 158 / 0.4);
+}
+
+.dark .scrollbar-auto:hover::-webkit-scrollbar-thumb {
+  background: rgb(87 83 78 / 0.5);
+}

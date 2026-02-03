@@ -1,11 +1,21 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-session-context";
 import useSectionInView from "@/lib/hooks";
+
+// Highlight marker component - Attio-style subtle marker effect
+const Highlight = ({ children }: { children: React.ReactNode }) => (
+  <span className="relative inline-block text-stone-900 dark:text-stone-100 font-medium">
+    <span className="relative z-10">{children}</span>
+    <span
+      className="absolute inset-0 -inset-x-1 bottom-0 h-[90%] bg-amber-200/60 dark:bg-amber-500/10 -z-0 rounded-sm"
+      aria-hidden="true"
+    />
+  </span>
+);
+
 function About() {
   const { ref } = useSectionInView("About", 0.5);
 
@@ -13,49 +23,44 @@ function About() {
     <motion.section
       ref={ref}
       id="about"
-      className="my-28 max-w-[45rem] text-center leading-7 sm:leading-8 sm:sm-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
+      className="my-28 max-w-3xl mx-auto px-6 scroll-mt-28"
+      initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{
-        delay: 0.175,
-      }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <SectionHeading>
-        <span className="flex flex-col font-serif items-center">
-          {" "}
-          About me{" "}
+      <SectionHeading>About</SectionHeading>
 
-        </span>
-      </SectionHeading>
-      <p className="mb-3">
-        I’m a final-year B.Tech student at the Maharashtra Institute of
-        Technology with a strong passion for {" "}
-        <span className="font-medium">full‑stack web development</span> and
-        emerging technologies. My core stack includes {" "}
-        <span className="font-medium">React, Next.js, Node.js, and MongoDB</span>,
-        and I enjoy building applications that balance functionality with a great
-        user experience.
-      </p>
+      <div className="space-y-6">
+        {/* Intro paragraph */}
+        <p className="text-stone-600 dark:text-stone-400 leading-[1.8] text-[1.0625rem]">
+          I&apos;m a final-year B.Tech student at the{" "}
+          <Highlight>Maharashtra Institute of Technology</Highlight>{" "}
+          with a passion for building products that solve real problems. I specialize in{" "}
+          <Highlight>full-stack development</Highlight>
+          , working primarily with React, Next.js, Node.js, and PostgreSQL.
+        </p>
 
-      <p className="mb-3">
-        For me, programming is all about {" "}
-        <span className="italic">problem‑solving</span>—breaking down complex
-        issues and finding elegant solutions that work in the real world. I’m
-        also exploring {" "}
-        <span className="font-medium">Agentic AI</span> and {" "}
-        <span className="font-medium">Generative AI</span>, focusing on how
-        intelligent agents and large language models can create smarter, more
-        adaptive applications. Over time, I’ve gained experience with cloud
-        technologies, Docker, and modern deployment workflows, allowing me to
-        take projects from idea to production efficiently.
-      </p>
+        {/* Core interests */}
+        <p className="text-stone-600 dark:text-stone-400 leading-[1.8] text-[1.0625rem]">
+          What excites me most is the intersection of{" "}
+          <Highlight>AI and software engineering</Highlight>
+          . I&apos;m exploring agentic AI systems and how large language models can create
+          smarter, more adaptive applications. From automated workflows to intelligent assistants—
+          I believe AI will fundamentally change how we build and interact with software.
+        </p>
 
-      <p>
-        Beyond coding, I’m deeply interested in self‑development and often read
-        books on personal growth to sharpen my mindset and broaden my
-        perspective. I also enjoy playing badminton, exploring anime, and gaming
-        to recharge and stay creative.
-      </p>
+        {/* Technical depth */}
+        <p className="text-stone-600 dark:text-stone-400 leading-[1.8] text-[1.0625rem]">
+          I care about the details: clean architecture, type safety, and developer experience.
+          I&apos;ve worked with Docker, cloud platforms, and modern CI/CD pipelines to ship
+          production-grade applications. For me, great software is about{" "}
+          <Highlight>solving problems elegantly</Highlight>—not just making things work.
+           When I&apos;m not coding, you&apos;ll find me reading about personal development,
+            playing badminton, or exploring new anime series.
+        </p>
+
+        
+      </div>
     </motion.section>
   );
 }

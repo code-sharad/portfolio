@@ -24,13 +24,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <link rel="icon" type="" href="/favicon.ico" sizes="any" />
       <head>
+        <link rel="icon" href="/sharad..png" />
         <meta name="google-site-verification" content="fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY" />
         <meta name="google-site-verification" content="T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54" />
         <meta property="og:title" content="Sharad Bhadait" />
         <meta property="og:description" content="I like to learn new technologies to make something useful. " />
-        <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D5603AQHbGy1vvHy3hQ/profile-displayphoto-shrink_200_200/B56ZUkJJNCHsAc-/0/1740068132260?e=1746057600&v=beta&t=s5PLX4_mv-WB4r5dpS01qvSis8QVN3NrrZBHPAiFKTE" />
+        {/* <meta property="og:image" src="@public/sharad.ico" /> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://sharad31.vercel.app" />
 
