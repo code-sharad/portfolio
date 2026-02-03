@@ -33,7 +33,6 @@ function Header() {
             >
               <Link
                 onClick={() => {
-                  console.log("Clicked on:", link.name);
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}

@@ -5,6 +5,35 @@ import { BsArrowLeft } from "react-icons/bs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
+import type { Metadata } from "next";
+import Image from "next/image";
+
+// Generate dynamic metadata for each project page
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const project = projectsData.find((p) => p.slug === slug);
+
+    if (!project) {
+        return {
+            title: "Project Not Found",
+        };
+    }
+
+    return {
+        title: `${project.title} | Sharad Bhadait`,
+        description: project.description,
+        openGraph: {
+            title: project.title,
+            description: project.description,
+            type: "article",
+            url: `https://sharad31.vercel.app/project/${slug}`,
+        },
+    };
+}
 
 // Attio-inspired MDX components - clean, modern, minimal with excellent typography
 const components = {
@@ -132,18 +161,17 @@ const components = {
         <em className="italic text-stone-700 dark:text-stone-300" {...props} />
     ),
 
-    // Images and Videos - Attio-style clean presentation
+    // Images and Videos - Attio-style clean presentation with next/image optimization
     img: ({ src, alt, ...props }: any) => {
         // Check if the source is a video (GitHub user attachments are often videos)
         const isVideo = src && (
             src.includes('user-attachments/assets') ||
             src.endsWith('.mp4') ||
             src.endsWith('.webm') ||
-            src.endsWith('.mov') ||
-            src.endsWith('.gif')
+            src.endsWith('.mov')
         );
 
-        if (isVideo && !src.endsWith('.gif')) {
+        if (isVideo) {
             return (
                 <figure className="my-10">
                     <div className="overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 shadow-sm bg-stone-100 dark:bg-stone-900">
@@ -166,15 +194,21 @@ const components = {
             );
         }
 
-        // Regular image (including gifs)
+        // For GIFs, use unoptimized to preserve animation
+        const isGif = src?.endsWith('.gif');
+
+        // Regular image with next/image optimization
         return (
             <figure className="my-10">
-                <div className="overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 shadow-sm">
-                    <img
+                <div className="overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 shadow-sm relative">
+                    <Image
                         src={src}
                         alt={alt || ''}
+                        width={800}
+                        height={600}
                         className="w-full h-auto"
-                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 800px"
+                        unoptimized={isGif}
                         {...props}
                     />
                 </div>

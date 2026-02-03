@@ -12,9 +12,21 @@ import ThemeSwitch from "./components/theme-switch";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://iamsharad.in"),
   title: "Sharad Bhadait",
   description: "Sharad is Full Stack Developer",
-
+  icons: {
+    icon: "/sharad.png",
+  },
+  verification: {
+    google: ["fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY", "T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54"],
+  },
+  openGraph: {
+    title: "Sharad Bhadait",
+    description: "I like to learn new technologies to make something useful.",
+    type: "website",
+    url: "https://iamsharad.in",
+  },
 };
 
 export default function RootLayout({
@@ -24,17 +36,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <head>
-        <link rel="icon" href="/sharad..png" />
-        <meta name="google-site-verification" content="fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY" />
-        <meta name="google-site-verification" content="T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54" />
-        <meta property="og:title" content="Sharad Bhadait" />
-        <meta property="og:description" content="I like to learn new technologies to make something useful. " />
-        {/* <meta property="og:image" src="@public/sharad.ico" /> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sharad31.vercel.app" />
-
-      </head>
       <body
         className={`${outfit.className} bg-stone-100 text-stone-950 relative dark:bg-stone-950 dark:text-stone-50 dark:text-opacity-100 mx-auto `}
       >

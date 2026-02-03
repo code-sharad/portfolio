@@ -27,7 +27,7 @@ function Intro() {
             alt="Sharad"
             width="224"
             height="224"
-            quality="100"
+            quality={100}
             priority={true}
             className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover border-1 border-white dark:border-stone-800 shadow-xl"
           />
