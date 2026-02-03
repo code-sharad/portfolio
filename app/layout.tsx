@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Sharad Bhadait",
   description: "Sharad is Full Stack Developer",
   icons: {
-    icon: "/sharad.png",
+    icon: "/sharad_fav.png",
   },
   verification: {
     google: ["fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY", "T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54"],

@@ -12,7 +12,7 @@ function Intro() {
     <section
       ref={ref}
       id="home"
-      className="min-h-[85vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem]"
+      className="min-h-[65vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem] mb-16"
     >
       {/* Profile Image */}
       <motion.div
@@ -29,7 +29,7 @@ function Intro() {
             height="224"
             quality={100}
             priority={true}
-            className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover border-1 border-white dark:border-stone-800 shadow-xl"
+            className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover border-none border-white dark:border-stone-800 shadow-xl"
           />
 
         </div>
