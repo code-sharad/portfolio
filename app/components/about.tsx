@@ -28,7 +28,16 @@ function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <SectionHeading>About</SectionHeading>
+      <SectionHeading>
+        <span className="inline-flex items-center gap-2">
+          About
+          <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Technologist.webp"
+            alt="Technologist"
+            className="w-8 h-8 sm:w-9 sm:h-9"
+          />
+        </span>
+      </SectionHeading>
 
       <div className="space-y-6">
         {/* Intro paragraph */}
@@ -55,11 +64,11 @@ function About() {
           I&apos;ve worked with Docker, cloud platforms, and modern CI/CD pipelines to ship
           production-grade applications. For me, great software is about{" "}
           <Highlight>solving problems elegantly</Highlight>—not just making things work.
-           When I&apos;m not coding, you&apos;ll find me reading about personal development,
-            playing badminton, or exploring new anime series.
+          When I&apos;m not coding, you&apos;ll find me reading about personal development,
+          playing badminton, or exploring new anime series.
         </p>
 
-        
+
       </div>
     </motion.section>
   );

@@ -13,12 +13,12 @@ export default function SplashScreen() {
         // Start exit sequence after animation completes
         const timer = setTimeout(() => {
             setIsVisible(false);
-            document.body.style.overflow = "unset";
+            document.body.style.overflow = "";
         }, 2000); // 1s draw + 1s hold
 
         return () => {
             clearTimeout(timer);
-            document.body.style.overflow = "unset";
+            document.body.style.overflow = "";
         };
     }, []);
 
@@ -26,8 +26,8 @@ export default function SplashScreen() {
         <AnimatePresence>
             {isVisible && (
                 <motion.div
-                    initial={{ opacity: 1,scale:3 }}
-                    animate={{ opacity: 1,scale:1 }}
+                    initial={{ opacity: 1, scale: 1.1 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 1, filter: "blur(10px)" }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="fixed inset-0 z-[9999] flex items-center justify-center bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-3xl"

@@ -45,13 +45,18 @@ function Intro() {
         className="text-center max-w-2xl"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-[1.1]">
-          Hi, I'm Sharad
+          Hey, I'm Sharad{" "}
+          <img
+            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Waving%20Hand.webp"
+            alt="Waving Hand"
+            className="inline-block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+          />
         </h1>
         <p className="mt-4 text-lg sm:text-xl text-stone-500 dark:text-stone-400 leading-relaxed">
-          Full-stack developer building web applications with{" "}
-          <span className="text-stone-900 dark:text-stone-100 font-medium">React</span>,{" "}
-          <span className="text-stone-900 dark:text-stone-100 font-medium">Next.js</span>, and{" "}
-          <span className="text-stone-900 dark:text-stone-100 font-medium">AI</span>.
+          A curious developer passionate about{" "}
+          <span className="text-stone-900 dark:text-stone-100 font-medium">Full-Stack Development</span>,{" "}
+          <span className="text-stone-900 dark:text-stone-100 font-medium">Cloud</span>, and{" "}
+          <span className="text-stone-900 dark:text-stone-100 font-medium">Generative AI</span>.
         </p>
       </motion.div>
 

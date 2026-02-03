@@ -7,13 +7,13 @@ import Experience from "./components/experience";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  items-center justify-between p-4 sm:p-24">
+    <main className="flex min-h-screen w-full max-w-full flex-col items-center justify-between p-4 sm:p-24 overflow-x-hidden">
       <Intro />
       {/* <SectionDivider /> */}
       <About />
       <Projects />
-      <Skills/>
-      <Experience/>
+      <Skills />
+      <Experience />
     </main>
   );
 }
