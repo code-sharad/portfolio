@@ -8,8 +8,9 @@ type useSectionInViewProps = {
 }
 
 function useSectionInView(
-  sectionName
-    : SectionName, threshold = 0.75) {
+  sectionName: SectionName,
+  threshold = 0.75
+) {
   const { ref, inView } = useInView({
     threshold: threshold,
   });
