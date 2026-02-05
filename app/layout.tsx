@@ -22,6 +22,9 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iamsharad.in"),
+  alternates:{
+    canonical:"https://iamsharad.in"
+  },
   title: "Sharad Bhadait",
   description: "Sharad is Full Stack Developer",
   icons: {
@@ -36,6 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://iamsharad.in",
   },
+
 };
 
 export default function RootLayout({
