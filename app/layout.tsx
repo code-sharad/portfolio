@@ -28,7 +28,27 @@ export const metadata: Metadata = {
   title: "Sharad Bhadait",
   description: "Sharad is Full Stack Developer",
   icons: {
-    icon: "/sharad_fav.png",
+    icon: [
+      { url: '/favicon/favicon.ico', sizes:'32x32'},
+      {url: '/favicon/favicon-16.png', sizes:'16x16', type:'image/png'},
+      {url: '/favicon/favicon-32.png', sizes:'32x32', type:'image/png'},
+    ],
+    apple: '/favicon/favicon-180.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon/favicon-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        rel: 'icon',
+        url: '/favicon/favicon-512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      }
+    ]
+    
   },
   verification: {
     google: ["fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY", "T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54"],

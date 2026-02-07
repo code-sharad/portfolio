@@ -21,19 +21,24 @@ function Intro() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="mb-8"
+        className="mb-8 relative"
       >
-        <div className="relative">
-          <Image
-            src="/sharad.png"
-            alt="Sharad"
-            width="224"
-            height="224"
-            quality={100}
-            priority={true}
-            className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover border-none border-white dark:border-stone-800 shadow-xl"
-          />
+        {/* Glow effect behind image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-300 via-stone-200 to-stone-300 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700 rounded-3xl blur-2xl opacity-50 dark:opacity-20 scale-105" />
 
+        {/* Gradient ring effect */}
+        <div className="relative p-1 rounded-3xl bg-transparent ">
+          <div className="relative p-2 rounded-3xl bg-transparent">
+            <Image
+              src="/sharad-unbac.png"
+              alt="Sharad"
+              width="224"
+              height="224"
+              quality={100}
+              priority={true}
+              className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover shadow-xl dark:shadow-md shadow-stone-100 dark:shadow-stone-950 bg-transparent backdrop-blur-lg border-[1px] border-stone-200 dark:border-stone-900"
+            />
+          </div>
         </div>
       </motion.div>
 
