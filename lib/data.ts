@@ -55,6 +55,14 @@ export const experiencesData = [
     date: "2020 - 2022",
   },
   {
+    title: "Maharashtra Institute of Technology",
+    location: "Chh Sambhaji Nagar, Maharashtra, India",
+    description:
+      "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my final year",
+    icon: React.createElement(LuGraduationCap),
+    date: "2022 - present",
+  },
+  {
     title: "Arohi Softwares",
     location: "Remote, India",
     description:
@@ -69,14 +77,6 @@ export const experiencesData = [
       "Developed end-to-end Stripe payment integration with automated subscription management, JWT authentication, and RESTful API architecture for user onboarding. Integrated 5+ third-party OAuth services (Slack, Gmail, Trello, GitHub, Jira) with secure token encryption, asynchronous job processing using BullMQ, and error handling. Implemented LangSmith monitoring framework for AI agent diagnostics, reducing troubleshooting time by 60% through real-time tracing and performance analytics.",
     icon: React.createElement(CgWorkAlt),
     date: "October 2025 – Present",
-  },
-  {
-    title: "Maharashtra Institute of Technology",
-    location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description:
-      "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my final year",
-    icon: React.createElement(LuGraduationCap),
-    date: "2022 - present",
   },
 ] as const;
 
