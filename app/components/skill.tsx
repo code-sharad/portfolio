@@ -180,7 +180,7 @@ function Skills() {
       ref={ref}
       className="mb-28 w-full max-w-[53rem] px-4 scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My Skills</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
       <SkillsMarquee />
     </section>
   );

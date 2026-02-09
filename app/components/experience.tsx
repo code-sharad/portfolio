@@ -13,7 +13,7 @@ function Experience() {
       id="experience"
       className="px-6 scroll-mt-28 mb-28 sm:mb-40 max-w-2xl mx-auto"
     >
-      <SectionHeading>My Experience</SectionHeading>
+      <SectionHeading>Experience</SectionHeading>
       <TimelineComponent />
     </section>
   );
