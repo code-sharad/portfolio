@@ -42,6 +42,9 @@ const config: Config = {
 				blob: 'blob 7s infinite',
 				tilt: 'tilt 10s infinite linear'
 			},
+			fontFamily: {
+				garamond: ["var(--font-garamond)"],
+			},
 			keyframes: {
 				tilt: {
 					'0%,50%,100%': {

@@ -4,6 +4,7 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
+import EmblaCarousel from "./EmblaCarousel";
 import useSectionInView from "@/lib/hooks";
 
 function Projects() {
@@ -23,13 +24,11 @@ function Projects() {
         />
       </div>
 
-      {/* Project Grid */}
-      <div className="
-        flex w-full overflow-x-auto snap-x snap-mandatory gap-6 pb-8 px-4 
-        sm:grid sm:grid-cols-1 md:grid-cols-2 sm:overflow-visible sm:gap-8 sm:pb-0 sm:px-0
-        scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden 
-        max-w-5xl mx-auto
-      ">
+      {/* Mobile: Carousel View */}
+      <EmblaCarousel options={{ loop: false, align: "center", containScroll: "trimSnaps" }} />
+
+      {/* Desktop: Grid View */}
+      <div className="hidden sm:grid sm:grid-cols-1 md:grid-cols-2 sm:gap-8 max-w-5xl mx-auto">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />

@@ -1,13 +1,36 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import useSectionInView from "@/lib/hooks";
-import { SectionGrid } from "./grid-background";
+import { PixelAnimation } from "./pixel-animation";
+
+type AnimationStyle =
+  | "glyph-matrix"
+  | "organic-pulse"
+  | "matrix-rain"
+  | "reactive-wave"
+  | "constellation"
+  | "dna-helix"
+  | "neural-network"
+  | "skills-matrix";
+
+const animationStyles: { value: AnimationStyle; label: string; description: string }[] = [
+  { value: "glyph-matrix", label: "Glyph Matrix", description: "Nothing Phone inspired symbols" },
+  { value: "organic-pulse", label: "Organic Pulse", description: "Breathing cellular pattern" },
+  { value: "matrix-rain", label: "Matrix Rain", description: "Sanskrit falling characters" },
+  { value: "reactive-wave", label: "Reactive Wave", description: "Interactive mouse waves" },
+  { value: "constellation", label: "Constellation", description: "Connected star network" },
+  { value: "dna-helix", label: "DNA Helix", description: "Rotating double helix" },
+  { value: "neural-network", label: "Neural Network", description: "Pulsing AI connections" },
+  { value: "skills-matrix", label: "Skills Matrix", description: "Floating tech skills" },
+];
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const [currentStyle, setCurrentStyle] = useState<AnimationStyle>("glyph-matrix");
+  const [showStylePicker, setShowStylePicker] = useState(false);
 
   return (
     <section
@@ -15,13 +38,60 @@ function Intro() {
       id="home"
       className="min-h-[85vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem] relative"
     >
-      <SectionGrid />
+      {/* Pixel Animation Background - Expanded container */}
+      <div className="absolute inset-0 w-[250%] h-[150%] -left-[75%] -top-[75%] overflow-visible pointer-events-none z-0">
+        <PixelAnimation style={currentStyle} intensity={0.7} speed={1} pixelSize={16} />
+      </div>
+
+      {/* Animation Style Picker Toggle */}
+      {/* <motion.button
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        onClick={() => setShowStylePicker(!showStylePicker)}
+        className="absolute top-4 right-4 z-20 p-2 rounded-full bg-stone-100/80 dark:bg-stone-800/80 backdrop-blur-md border border-stone-200 dark:border-stone-700 hover:bg-stone-200 dark:hover:bg-stone-700 transition-all shadow-sm"
+        aria-label="Toggle animation style picker"
+      >
+        <svg className="w-5 h-5 text-stone-600 dark:text-stone-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+        </svg>
+      </motion.button> */}
+
+      {/* Animation Style Picker Panel */}
+      {showStylePicker && (
+        <motion.div
+          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+          className="absolute top-14 right-4 z-20 p-3 rounded-xl bg-stone-50/95 dark:bg-stone-900/95 backdrop-blur-lg border border-stone-200 dark:border-stone-800 shadow-xl max-w-xs"
+        >
+          <p className="text-xs font-medium text-stone-500 dark:text-stone-400 mb-2 uppercase tracking-wider">Pixel Animation Style</p>
+          <div className="space-y-1">
+            {animationStyles.map((style) => (
+              <button
+                key={style.value}
+                onClick={() => {
+                  setCurrentStyle(style.value);
+                  setShowStylePicker(false);
+                }}
+                className={`w-full text-left px-3 py-2 rounded-lg transition-all ${currentStyle === style.value
+                  ? "bg-stone-200 dark:bg-stone-700 text-stone-900 dark:text-stone-100"
+                  : "hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-600 dark:text-stone-300"
+                  }`}
+              >
+                <span className="block text-sm font-medium">{style.label}</span>
+                <span className="block text-xs text-stone-400 dark:text-stone-500">{style.description}</span>
+              </button>
+            ))}
+          </div>
+        </motion.div>
+      )}
       {/* Profile Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className="mb-8 relative"
+        className="mb-8 relative z-10"
       >
         {/* Glow effect behind image */}
         <div className="absolute inset-0 bg-gradient-to-br from-stone-300 via-stone-200 to-stone-300 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700 rounded-3xl blur-2xl opacity-50 dark:opacity-20 scale-105" />
@@ -47,9 +117,9 @@ function Intro() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-center max-w-2xl"
+        className="text-center max-w-2xl z-10"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-stone-900 dark:text-stone-100 leading-[1.1]">
+        <h1 className="font-garamond italic font-normal text-4xl sm:text-5xl md:text-6xl tracking-tight text-stone-900 dark:text-stone-100 leading-[1.1]">
           Hey, I'm Sharad{" "}
           <img
             src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Waving%20Hand.webp"
@@ -70,7 +140,7 @@ function Intro() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="mt-10 flex flex-wrap items-center justify-center gap-4"
+        className="mt-10 flex flex-wrap items-center justify-center gap-4 z-10"
       >
         {/* Primary CTA */}
         <a
@@ -101,7 +171,7 @@ function Intro() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="mt-8 flex items-center gap-4"
+        className="mt-8 flex items-center gap-4 z-10"
       >
         <a
           href="https://github.com/code-sharad"

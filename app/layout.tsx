@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, EB_Garamond } from "next/font/google";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -19,19 +19,25 @@ import ThemeSwitch from "./components/theme-switch";
 import SplashScreen from "./components/splash-screen";
 
 const outfit = Outfit({ subsets: ["latin"] });
+const garamond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-garamond",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iamsharad.in"),
-  alternates:{
-    canonical:"https://iamsharad.in"
+  alternates: {
+    canonical: "https://iamsharad.in"
   },
   title: "Sharad Bhadait",
   description: "Sharad is Full Stack Developer",
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico', sizes:'32x32'},
-      {url: '/favicon/favicon-16.png', sizes:'16x16', type:'image/png'},
-      {url: '/favicon/favicon-32.png', sizes:'32x32', type:'image/png'},
+      { url: '/favicon/favicon.ico', sizes: '32x32' },
+      { url: '/favicon/favicon-16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: '/favicon/favicon-180.png',
     other: [
@@ -48,7 +54,7 @@ export const metadata: Metadata = {
         type: 'image/png',
       }
     ]
-    
+
   },
   verification: {
     google: ["fjfT-n1xIl3UgMjielWkqtL3rAOEoZJGPbSFF0635WY", "T6-2SxCm2PXVl1wmX9Y0FzZtGk6C1mid3TDMwQIAz54"],
@@ -70,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth overflow-x-hidden">
       <body
-        className={`${outfit.className} bg-stone-100 text-stone-950 relative dark:bg-stone-950 dark:text-stone-50 dark:text-opacity-100 mx-auto overflow-x-hidden`}
+        className={`${outfit.className} ${garamond.variable} bg-stone-100 text-stone-950 relative dark:bg-stone-950 dark:text-stone-50 dark:text-opacity-100 mx-auto overflow-x-hidden`}
       >
         {/* <div className="bg-[#b9afff]  fixed opacity-40 top-[12rem] -z-08 right-[5rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.7rem] dark:bg-[#946263]"></div> */}
         {/* <div className="bg-[#fbb183b9]  fixed opacity-40 top-[1rem] -z-08 right-[9rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[14rem] sm:w-[68.7rem] dark:bg-[#ffc1b0]"></div> */}

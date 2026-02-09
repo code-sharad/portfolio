@@ -30,6 +30,7 @@
   --color-card-foreground: hsl(28 10% 10%);
 
   --radius: 0.5rem;
+  --font-garamond: var(--font-garamond);
   
   /* Animations from tailwind.config.ts */
   --animate-blob: blob 7s infinite;

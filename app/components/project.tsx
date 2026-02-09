@@ -28,7 +28,7 @@ function Project(props: ProjectProps) {
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group w-[85vw] sm:w-full max-w-3xl flex-shrink-0 snap-center mb-0 sm:mb-12 last:mb-0"
+      className="group w-[75vw] sm:w-full max-w-3xl flex-shrink-0 snap-center mb-0 sm:mb-12 last:mb-0"
     >
       <div className="relative overflow-hidden rounded-2xl border border-stone-200/80 dark:border-stone-800/80 bg-white dark:bg-stone-900/50 transition-all duration-300 hover:border-stone-300 dark:hover:border-stone-700 hover:shadow-lg hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
 

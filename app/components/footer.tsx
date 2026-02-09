@@ -1,5 +1,44 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Animated glyph icon that randomly changes characters
+// Animated glyph icon that randomly changes characters
+function GlyphIcon() {
+  const glyphChars = "✦✧❖⟐⟡◈";
+  const [currentGlyph, setCurrentGlyph] = useState("⬡");
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * glyphChars.length);
+      setCurrentGlyph(glyphChars[randomIndex]);
+      setKey(prev => prev + 1);
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-6 h-6 flex items-center justify-center">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={key}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute text-2xl font-light text-stone-400 dark:text-stone-500"
+          aria-hidden="true"
+        >
+          {currentGlyph}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+  );
+}
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,17 +48,22 @@ function Footer() {
       <div className="max-w-3xl mx-auto px-6 py-12">
         {/* Main content */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          {/* Brand */}
-          <div>
-            <Link
+          {/* Brand with animated glyph icon */}
+          <div className="flex items-start gap-3">
+            <div className="mt-1">
+              <GlyphIcon />
+            </div>
+
+            <div>  <Link
               href="/"
               className="text-lg font-semibold text-stone-900 dark:text-stone-100 tracking-tight"
             >
-              Sharad
+              Sharad Bhadait
             </Link>
-            <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">
-              Building products that matter.
-            </p>
+              <p className="mt-1 text-sm text-stone-500 dark:text-stone-400">
+                Building products that matter.
+              </p>
+            </div>
           </div>
 
           {/* Links */}
