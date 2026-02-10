@@ -112,17 +112,17 @@ export function GlyphMatrixEffect({
                     const y = row * pixelSize;
                     const pixel = pixelData[row][col];
 
-                    // Apply parallax offset
-                    // We move pixels down based on scroll position and their depth
-                    // Deeper pixels (higher depth value) move more, creating standard parallax feel
-                    const scrollY = window.scrollY;
-                    const parallaxY = y + (scrollY * pixel.depth * 0.5); // 0.5 is a dampening factor
+                    // // Apply parallax offset
+                    // // We move pixels down based on scroll position and their depth
+                    // // Deeper pixels (higher depth value) move more, creating standard parallax feel
+                    // const scrollY = window.scrollY;
+                    // const parallaxY = y + (scrollY * pixel.depth * 0.5); // 0.5 is a dampening factor
 
                     const px = x + pixelSize / 2;
-                    const py = parallaxY + pixelSize / 2;
+                    const py = y + pixelSize / 2;
 
                     // Skip if out of view (considering some buffer)
-                    if (parallaxY < -pixelSize || parallaxY > height + pixelSize) continue;
+                    if (py < -pixelSize || py > height + pixelSize) continue;
 
                     // Rectangular edge fade (re-calculated with parallaxY)
                     const edgeFadeX = Math.min(px / (width * 0.15), (width - px) / (width * 0.15), 1);
@@ -145,7 +145,7 @@ export function GlyphMatrixEffect({
                             ? `rgba(168, 162, 158, ${alpha})`
                             : `rgba(87, 83, 78, ${alpha})`;
 
-                        ctx.fillText(glyphChars[pixel.char], x, parallaxY + pixelSize * 0.8);
+                        ctx.fillText(glyphChars[pixel.char], x, y + pixelSize * 0.8);
                     }
                 }
             }

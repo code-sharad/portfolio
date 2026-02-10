@@ -20,8 +20,8 @@ export default function PostsPage() {
     const posts = getAllPosts();
 
     return (
-        <main className="min-h-screen bg-stone-50 dark:bg-stone-950">
-            <div className="max-w-2xl mx-auto px-6 py-20 sm:py-28">
+        <main className="min-h-screen bg-stone-50 dark:bg-stone-950 overflow-x-hidden">
+            <div className="max-w-2xl mx-auto px-4 sm:px-6 py-16 sm:py-28">
                 {/* Navigation */}
                 <nav className="mb-12">
                     <Link
@@ -35,7 +35,7 @@ export default function PostsPage() {
 
                 {/* Header */}
                 <header className="mb-16">
-                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 leading-[1.1] mb-4">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 leading-[1.1] mb-4">
                         Posts
                     </h1>
                     {/* <p className="text-lg text-stone-500 dark:text-stone-400 leading-relaxed">
@@ -59,7 +59,7 @@ export default function PostsPage() {
                                 href={`/post/${post.slug}`}
                                 className="group block"
                             >
-                                <article className="relative py-6 px-5 -mx-5 rounded-2xl transition-colors hover:bg-stone-100/60  group">
+                                <article className="relative py-5 sm:py-6 px-3 sm:px-5 -mx-3 sm:-mx-5 rounded-2xl transition-colors group overflow-hidden">
                                     {/* Date */}
                                     <time className="block text-sm font-mono text-stone-400 dark:text-stone-500 mb-2 tracking-tight">
                                         {new Date(post.date).toLocaleDateString("en-US", {
@@ -70,12 +70,12 @@ export default function PostsPage() {
                                     </time>
 
                                     {/* Title */}
-                                    <h2 className="group-hover:underline text-xl font-semibold text-stone-900 dark:text-stone-100 mb-2 group-hover:text-stone-700 dark:group-hover:text-stone-200 transition-colors leading-snug">
+                                    <h2 className="group-hover:underline group-hover:underline-offset-4 group-hover:decoration-[1px] text-lg sm:text-xl font-semibold text-stone-900 dark:text-stone-100 mb-2 group-hover:text-stone-700 dark:group-hover:text-stone-200 transition-colors leading-snug pr-6 sm:pr-8 break-words">
                                         {post.title}
                                     </h2>
 
                                     {/* Description */}
-                                    <p className="text-stone-500 dark:text-stone-400 text-[0.95rem] leading-relaxed line-clamp-2 mb-3">
+                                    <p className="text-stone-500 dark:text-stone-400 text-sm sm:text-[0.95rem] leading-relaxed line-clamp-2 mb-3 pr-6 sm:pr-8">
                                         {post.description}
                                     </p>
 
@@ -94,7 +94,7 @@ export default function PostsPage() {
                                     )}
 
                                     {/* Arrow indicator */}
-                                    <div className="absolute right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <div className="absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <svg
                                             className="w-5 h-5 text-stone-400 dark:text-stone-500"
                                             fill="none"

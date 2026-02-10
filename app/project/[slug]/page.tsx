@@ -40,13 +40,13 @@ const components = {
     // Headings - Large, bold, with tight tracking (Attio style)
     h1: (props: any) => (
         <h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 mt-12 mb-6 leading-[1.1]"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-stone-950 dark:text-stone-50 mt-12 mb-6 leading-[1.1] break-words"
             {...props}
         />
     ),
     h2: (props: any) => (
         <h2
-            className="text-2xl sm:text-3xl font-semibold tracking-tight text-stone-900 dark:text-stone-100 mt-12 mb-4 leading-tight"
+            className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-stone-900 dark:text-stone-100 mt-12 mb-4 leading-tight break-words"
             {...props}
         />
     ),
@@ -72,7 +72,7 @@ const components = {
 
         return (
             <p
-                className="text-stone-600 dark:text-stone-400 leading-[1.8] mb-6 text-[1.0625rem]"
+                className="text-stone-600 dark:text-stone-400 leading-[1.8] mb-6 text-[1.0625rem] break-words overflow-wrap-anywhere"
                 {...props}
             >
                 {children}
@@ -104,33 +104,45 @@ const components = {
     a: ({ href, ...props }: any) => (
         <Link
             href={href || '#'}
-            className="text-stone-900 dark:text-stone-100 font-medium underline decoration-stone-300 dark:decoration-stone-600 underline-offset-[3px] decoration-1 hover:decoration-stone-500 dark:hover:decoration-stone-400 transition-colors"
+            className="text-stone-900 dark:text-stone-100 font-medium underline decoration-stone-300 dark:decoration-stone-600 underline-offset-[3px] decoration-1 hover:decoration-stone-500 dark:hover:decoration-stone-400 transition-colors break-all"
             {...props}
         />
     ),
 
-    // Inline code - Minimal, clean (Attio style)
-    code: (props: any) => (
-        <code
-            className="px-1.5 py-0.5 text-[0.875em] font-mono bg-stone-100 dark:bg-stone-800/80 text-stone-800 dark:text-stone-200 rounded-md border border-stone-200/80 dark:border-stone-700/50"
-            {...props}
-        />
-    ),
+    // Code - differentiates inline vs block (inside pre)
+    code: ({ children, className, ...props }: any) => {
+        // If className exists, it's a code block inside <pre> (e.g. language-tsx)
+        if (className) {
+            return (
+                <code className={className} {...props}>
+                    {children}
+                </code>
+            );
+        }
+        // Inline code — aggressive overflow prevention on mobile
+        return (
+            <code
+                className="px-1.5 py-0.5 text-[0.8em] sm:text-[0.875em] font-mono bg-stone-100 dark:bg-stone-800/80 text-stone-800 dark:text-stone-200 rounded-md border border-stone-200/80 dark:border-stone-700/50"
+                style={{ wordBreak: "break-all", overflowWrap: "anywhere" }}
+                {...props}
+            >
+                {children}
+            </code>
+        );
+    },
 
-    // Code blocks - Clean, modern with subtle header
+    // Code blocks - Clean, modern with subtle header, mobile-optimized
     pre: ({ children, ...props }: any) => (
-        <div className="my-8 overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950 dark:bg-black shadow-sm">
-            {/* Minimal header */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-stone-800/50 bg-stone-900/50 dark:bg-stone-900/30">
+        <div className="my-8 overflow-hidden rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950 dark:bg-black shadow-sm -mx-2 sm:mx-0">
+            <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 border-b border-stone-800/50 bg-stone-900/50 dark:bg-stone-900/30">
                 <div className="flex gap-1.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-stone-600"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-stone-600"></span>
                     <span className="w-2.5 h-2.5 rounded-full bg-stone-600"></span>
                 </div>
             </div>
-            {/* Code content */}
             <pre
-                className="p-5 overflow-x-auto text-[0.9rem] leading-relaxed text-stone-300 font-mono"
+                className="p-3 sm:p-5 overflow-x-auto text-[0.8rem] sm:text-[0.9rem] leading-relaxed text-stone-300 font-mono max-w-full"
                 {...props}
             >
                 {children}
@@ -220,6 +232,37 @@ const components = {
             </figure>
         );
     },
+
+    // Tables - responsive with horizontal scroll on mobile
+    table: (props: any) => (
+        <div className="my-8 overflow-x-auto -mx-2 sm:mx-0 rounded-xl border border-stone-200 dark:border-stone-800">
+            <table
+                className="w-full text-sm text-left text-stone-600 dark:text-stone-400 border-collapse min-w-[400px]"
+                {...props}
+            />
+        </div>
+    ),
+    thead: (props: any) => (
+        <thead
+            className="text-xs uppercase tracking-wider text-stone-500 dark:text-stone-400 bg-stone-100 dark:bg-stone-900/50"
+            {...props}
+        />
+    ),
+    tbody: (props: any) => (
+        <tbody className="divide-y divide-stone-200 dark:divide-stone-800" {...props} />
+    ),
+    tr: (props: any) => (
+        <tr className="hover:bg-stone-50 dark:hover:bg-stone-900/30 transition-colors" {...props} />
+    ),
+    th: (props: any) => (
+        <th
+            className="px-4 py-3 font-semibold text-stone-800 dark:text-stone-200 whitespace-nowrap"
+            {...props}
+        />
+    ),
+    td: (props: any) => (
+        <td className="px-4 py-3" {...props} />
+    ),
 };
 
 export default async function ProjectPage({
@@ -240,8 +283,8 @@ export default async function ProjectPage({
     const project = projectsData.find((p) => p.slug === slug);
 
     return (
-        <main className="min-h-screen bg-stone-50 dark:bg-stone-950">
-            <article className="max-w-2xl mx-auto px-6 py-20 sm:py-28">
+        <main className="min-h-screen bg-stone-50 dark:bg-stone-950 overflow-x-hidden">
+            <article className="max-w-2xl mx-auto px-4 sm:px-6 py-16 sm:py-28 overflow-hidden">
                 {/* Navigation */}
                 <nav className="mb-12">
                     <Link
@@ -271,7 +314,7 @@ export default async function ProjectPage({
                 )}
 
                 {/* Content */}
-                <div className="prose-reset">
+                <div className="prose-reset overflow-hidden">
                     <MDXRemote source={source} components={components} />
                 </div>
             </article>

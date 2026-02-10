@@ -197,6 +197,51 @@
     .pb-safe {
         padding-bottom: env(safe-area-inset-bottom, 0.5rem);
     }
+    /* Overflow wrap for mobile text */
+    .overflow-wrap-anywhere {
+        overflow-wrap: anywhere;
+    }
+
+    /* Comprehensive MDX content mobile overflow prevention */
+    .prose-reset {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .prose-reset * {
+        max-width: 100%;
+    }
+
+    .prose-reset pre {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+
+    .prose-reset code {
+        word-break: break-all;
+        overflow-wrap: anywhere;
+    }
+
+    .prose-reset pre code {
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .prose-reset img,
+    .prose-reset video,
+    .prose-reset iframe {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .prose-reset table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
 }
 
 /* Custom Scrollbar */
