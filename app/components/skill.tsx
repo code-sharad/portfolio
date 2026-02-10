@@ -172,12 +172,10 @@ function SkillsMarquee() {
 }
 
 function Skills() {
-  const { ref } = useSectionInView("Skills", 0.5);
 
   return (
     <section
       id="skills"
-      ref={ref}
       className="mb-28 w-full max-w-[53rem] px-4 scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>Skills</SectionHeading>
