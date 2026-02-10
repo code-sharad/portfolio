@@ -36,6 +36,10 @@ export const links = [
     name: "Experience",
     hash: "/#experience",
   },
+  {
+    name: "Posts",
+    hash: "/post",
+  },
 
 ] as const;
 

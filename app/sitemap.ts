@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { projectsData } from '@/lib/data'
+import { getAllPosts } from '@/lib/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://iamsharad.in'
@@ -11,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1,
+        },
+        {
+            url: `${baseUrl}/post`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
         },
     ]
 
@@ -24,5 +31,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.8,
         }))
 
-    return [...staticPages, ...projectPages]
+    // Dynamic post pages
+    const postPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+        url: `${baseUrl}/post/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
+    return [...staticPages, ...projectPages, ...postPages]
 }
