@@ -42,11 +42,15 @@ function About() {
       <div className="space-y-6">
         {/* Intro paragraph */}
         <p className="text-stone-600 dark:text-stone-400 leading-[1.8] text-[1.0625rem]">
-          I&apos;m a final-year B.Tech student at the{" "}
-          <Highlight>Maharashtra Institute of Technology</Highlight>{" "}
-          with a passion for building products that solve real problems. I specialize in{" "}
-          <Highlight>full-stack development</Highlight>
-          , working primarily with React, Next.js, Node.js, and PostgreSQL.
+          I&apos;m a software engineer pursuing a B.Tech in Electronics &amp; Computer
+          Engineering at the{" "}
+          <Highlight>Maharashtra Institute of Technology</Highlight> (2022–2026).
+          I build web applications and backend systems with{" "}
+          <Highlight>TypeScript, Node.js, PostgreSQL, and MongoDB</Highlight>.
+          From REST APIs and payment workflows to third-party integrations and
+          async job processing, I care about the backend as much as the pixels —
+          with a strong foundation in system design and hands-on experience with{" "}
+          <Highlight>AWS and GCP</Highlight>.
         </p>
 
         {/* Core interests */}

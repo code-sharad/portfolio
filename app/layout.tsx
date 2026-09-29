@@ -32,7 +32,8 @@ export const metadata: Metadata = {
     canonical: "https://iamsharad.in"
   },
   title: "Sharad Bhadait",
-  description: "Sharad is Full Stack Developer",
+  description:
+    "Sharad Bhadait is a software engineer building full-stack web applications and backend systems with TypeScript, Node.js, PostgreSQL, and MongoDB — REST APIs, payments, async job processing, and LLM-powered products.",
   icons: {
     icon: [
       { url: '/favicon/favicon.ico', sizes: '32x32' },
@@ -61,7 +62,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Sharad Bhadait",
-    description: "I like to learn new technologies to make something useful.",
+    description:
+      "Software engineer building web applications and backend systems — REST APIs, payment workflows, third-party integrations, and LLM-powered applications.",
     type: "website",
     url: "https://iamsharad.in",
   },

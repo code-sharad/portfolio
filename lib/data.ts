@@ -45,26 +45,12 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Orchid English School",
-    location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description: "",
-    icon: React.createElement(LuGraduationCap),
-    date: "2015 - 2020",
-  },
-  {
-    title: "Orchid Techo College",
-    location: "Chh Sambhaji Nagar, Maharashtra, India",
-    description: "",
-    icon: React.createElement(LuGraduationCap),
-    date: "2020 - 2022",
-  },
-  {
     title: "Maharashtra Institute of Technology",
-    location: "Chh Sambhaji Nagar, Maharashtra, India",
+    location: "Chhatrapati Sambhajinagar, Maharashtra, India",
     description:
-      "Pursuing a Bachelor's degree in Electronics and Computor Engineering. I'm currently in my final year",
+      "Pursuing a Bachelor's degree in Electronics and Computer Engineering.",
     icon: React.createElement(LuGraduationCap),
-    date: "2022 - present",
+    date: "2022 - 2026",
   },
   {
     title: "Arohi Softwares",
@@ -75,12 +61,20 @@ export const experiencesData = [
     date: "June 2024 - Sept 2024",
   },
   {
-    title: "TechlyAssist",
-    location: "Full Stack Developer",
+    title: "Freelance Software Developer",
+    location: "Invoice Management System",
     description:
-      "Developed end-to-end Stripe payment integration with automated subscription management, JWT authentication, and RESTful API architecture for user onboarding. Integrated 5+ third-party OAuth services (Slack, Gmail, Trello, GitHub, Jira) with secure token encryption, asynchronous job processing using BullMQ, and error handling. Implemented LangSmith monitoring framework for AI agent diagnostics, reducing troubleshooting time by 60% through real-time tracing and performance analytics.",
+      "Built a full-stack invoice management system for small businesses to simplify accounting and inventory tracking — real-time inventory updates, product search and categorization, invoice generation, and automated tax calculations. Built with React, Express, and MongoDB, deployed on GCP using Docker for containerization.",
     icon: React.createElement(CgWorkAlt),
-    date: "October 2025 – Present",
+    date: "April 2025",
+  },
+  {
+    title: "TechlyAssist",
+    location: "Full Stack Developer Intern",
+    description:
+      "Developed end-to-end Stripe payment integration with automated subscription management, JWT authentication, and RESTful API architecture for user onboarding. Integrated 5+ third-party OAuth services (Slack, Gmail, Trello, GitHub, Jira) with secure token encryption, asynchronous job processing using BullMQ, and error handling. Implemented LangSmith tracing and performance monitoring to improve debugging and identify bottlenecks in AI agent workflows.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Oct 2025 - Feb 2026",
   },
 ] as const;
 
@@ -121,8 +115,8 @@ export const projectsData = [
   {
     title: "Invoice Management System",
     slug: "invoice-management",
-    description: "I have created a web app for managing invoices. It's a simple app that allows you to create, edit, and delete invoices.",
-    tags: ['React', 'Tailwindcss', 'Nodejs', 'Expressjs', 'Mongodb', 'backend GCP'],
+    description: "A full-stack invoice management system for small businesses — real-time inventory updates, product search and categorization, invoice generation, and automated tax calculations. Built with React, Express, and MongoDB, deployed on GCP with Docker.",
+    tags: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'GCP'],
     imageUrl: invoice,
     url: "https://invoice31.vercel.app/"
   },
@@ -130,7 +124,7 @@ export const projectsData = [
     title: "ECESA",
     slug: "ecesa",
     description: "Developed a full-stack web platform for student enrollment in college workshops and events.",
-    tags: ['React', 'Tailwindcss', 'Nextjs', 'PostgresSQL', 'Razorpay'],
+    tags: ['React', 'Tailwind CSS', 'Next.js', 'PostgreSQL', 'Razorpay'],
     imageUrl: ecesa,
     url: "https://ecesa2.vercel.app"
   },
@@ -138,7 +132,7 @@ export const projectsData = [
     title: "CertifyPro",
     slug: "certify-pro",
     description: "Built a platform to generate bulk certificates using CSV uploads and a drag-and-drop editor. Features include font customization, live preview, ZIP download.",
-    tags: ['Vercel', 'Nextjs', 'Tailwindcss', 'MongoDB', 'Nodejs'],
+    tags: ['Vercel', 'Next.js', 'Tailwind CSS', 'MongoDB', 'Node.js'],
     imageUrl: certifyPro,
     url: "https://certifygen31.vercel.app/"
   },
@@ -146,7 +140,7 @@ export const projectsData = [
     title: "ProjectHub",
     slug: "project-hub",
     description: "It's a platform where students can share their projects with the world. Whether you're into coding, design, engineering, or any other field, you can upload your projects.",
-    tags: ['ReactJS', 'Tailwindcss', 'Appwrite', 'DigitalOcean'],
+    tags: ['ReactJS', 'Tailwind CSS', 'Appwrite', 'DigitalOcean'],
     imageUrl: projecthub,
     url: "https://projecthubs.vercel.app/"
   },
