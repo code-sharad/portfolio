@@ -1260,12 +1260,30 @@ export function SkillsMatrixEffect({
 // ========================
 // UNIFIED PIXEL ANIMATION COMPONENT
 // ========================
+function usePrefersReducedMotion(): boolean {
+    const [reduced, setReduced] = React.useState(false);
+
+    useEffect(() => {
+        const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+        setReduced(mq.matches);
+        const handler = (e: MediaQueryListEvent) => setReduced(e.matches);
+        mq.addEventListener("change", handler);
+        return () => mq.removeEventListener("change", handler);
+    }, []);
+
+    return reduced;
+}
+
 export function PixelAnimation({
     style = "glyph-matrix",
     intensity = 0.5,
     speed = 1,
     pixelSize = 14,
 }: PixelAnimationProps) {
+    // Respect users who opt out of motion: render no background animation.
+    const reducedMotion = usePrefersReducedMotion();
+    if (reducedMotion) return null;
+
     switch (style) {
         case "glyph-matrix":
             return <GlyphMatrixEffect intensity={intensity} speed={speed} pixelSize={pixelSize} />;

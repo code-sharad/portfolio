@@ -18,7 +18,7 @@ function Projects() {
       <div className="flex sm:hidden justify-center items-center gap-2 mb-6 text-stone-400 dark:text-stone-500 text-sm">
         <span>Swipe to explore</span>
         <img
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Backhand%20Index%20Pointing%20Right.webp"
+          src="/emojis/backhand-pointing-right.webp"
           alt="Swipe right"
           className="w-6 h-6"
         />

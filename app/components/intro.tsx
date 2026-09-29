@@ -40,7 +40,7 @@ function Intro() {
     >
       {/* Pixel Animation Background - Expanded container */}
       <div className="absolute inset-0 w-[250%] h-[150%] -left-[75%] -top-[75%] overflow-visible pointer-events-none z-0">
-        <PixelAnimation style={currentStyle} intensity={0.7} speed={1} pixelSize={16} />
+        <PixelAnimation style={currentStyle} intensity={0.3} speed={1} pixelSize={16} />
       </div>
 
       {/* Animation Style Picker Toggle */}
@@ -120,10 +120,10 @@ function Intro() {
         className="text-center max-w-2xl z-10"
       >
         <h1 className="font-garamond italic font-normal text-4xl sm:text-5xl md:text-6xl tracking-tight text-stone-900 dark:text-stone-100 leading-[1.1]">
-          Hey, I'm Sharad{" "}
+          Hi, I'm Sharad Bhadait{" "}
           <img
-            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Waving%20Hand.webp"
-            alt="Waving Hand"
+            src="/emojis/waving-hand.webp"
+            alt="Waving hand"
             className="inline-block w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
           />
         </h1>

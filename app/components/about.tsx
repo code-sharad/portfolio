@@ -32,7 +32,7 @@ function About() {
         <span className="inline-flex items-center gap-2">
           About
           <img
-            src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Technologist.webp"
+            src="/emojis/technologist.webp"
             alt="Technologist"
             className="w-8 h-8 sm:w-9 sm:h-9"
           />

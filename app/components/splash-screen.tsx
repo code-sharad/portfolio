@@ -14,7 +14,7 @@ export default function SplashScreen() {
         const timer = setTimeout(() => {
             setIsVisible(false);
             document.body.style.overflow = "";
-        }, 2000); // 1s draw + 1s hold
+        }, 900); // ~0.9s draw, then dismiss — keep it quick for visitors
 
         return () => {
             clearTimeout(timer);
@@ -56,7 +56,7 @@ export default function SplashScreen() {
                                 initial={{ pathLength: 0, opacity: 0 }}
                                 animate={{ pathLength: 1, opacity: 1 }}
                                 transition={{
-                                    duration: 1.5,
+                                    duration: 0.9,
                                     ease: "easeInOut",
                                 }}
                             />
