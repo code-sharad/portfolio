@@ -34,6 +34,7 @@ const EmblaCarousel = (props: PropType) => {
                         <DotButton
                             key={index}
                             onClick={() => onDotButtonClick(index)}
+                            aria-label={`Go to slide ${index + 1}`}
                             className={'w-3 h-3 rounded-full transition-all '.concat(
                                 index === selectedIndex
                                     ? 'bg-stone-800 dark:bg-stone-200 w-6'

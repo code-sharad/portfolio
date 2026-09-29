@@ -39,7 +39,7 @@ function Intro() {
       className="min-h-[85vh] flex flex-col items-center justify-center px-6 scroll-mt-[100rem] relative"
     >
       {/* Pixel Animation Background - Expanded container */}
-      <div className="absolute inset-0 w-[250%] h-[150%] -left-[75%] -top-[75%] overflow-visible pointer-events-none z-0">
+      <div className="absolute inset-0 w-[160%] h-[130%] -left-[30%] -top-[15%] overflow-visible pointer-events-none z-0">
         <PixelAnimation style={currentStyle} intensity={0.3} speed={1} pixelSize={16} />
       </div>
 
@@ -101,10 +101,10 @@ function Intro() {
           <div className="relative p-2 rounded-3xl bg-transparent">
             <Image
               src="/sharad-unbac.png"
-              alt="Sharad"
+              alt="Portrait of Sharad Bhadait"
               width="224"
               height="224"
-              quality={100}
+              sizes="(max-width: 640px) 144px, 224px"
               priority={true}
               className="h-36 w-36 sm:h-48 sm:w-48 md:h-56 md:w-56 rounded-3xl object-cover shadow-xl dark:shadow-md shadow-stone-100 dark:shadow-stone-950 bg-transparent backdrop-blur-lg border-[1px] border-stone-200 dark:border-stone-900"
             />

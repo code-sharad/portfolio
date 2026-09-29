@@ -23,6 +23,10 @@ interface PixelAnimationProps {
 // ========================
 // GLYPH MATRIX EFFECT - Nothing Phone Inspired
 // ========================
+// Cap ambient background animation to ~20fps — full 60fps canvas work
+// was the single biggest contributor to Total Blocking Time.
+const MIN_FRAME_INTERVAL = 50; // ms between frames
+
 export function GlyphMatrixEffect({
     intensity = 0.3,
     speed = 4,
@@ -92,7 +96,13 @@ export function GlyphMatrixEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -227,7 +237,13 @@ export function OrganicPulseEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -374,7 +390,13 @@ export function MatrixRainEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -509,7 +531,13 @@ export function ReactiveWaveEffect({
         canvas.parentElement?.addEventListener("mousemove", handleMouseMove);
         canvas.parentElement?.addEventListener("mouseleave", handleMouseLeave);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -666,7 +694,13 @@ export function ConstellationEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -816,7 +850,13 @@ export function DNAHelixEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -1008,7 +1048,13 @@ export function NeuralNetworkEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -1198,7 +1244,13 @@ export function SkillsMatrixEffect({
         resize();
         window.addEventListener("resize", resize);
 
+        let lastFrame = 0;
         const animate = () => {
+            if (performance.now() - lastFrame < MIN_FRAME_INTERVAL) {
+                animationRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            lastFrame = performance.now();
             if (!ctx || !canvas) return;
 
             const width = canvas.width / (window.devicePixelRatio || 1);
@@ -1282,8 +1334,36 @@ export function PixelAnimation({
 }: PixelAnimationProps) {
     // Respect users who opt out of motion: render no background animation.
     const reducedMotion = usePrefersReducedMotion();
+    // Pause the canvas entirely once the hero scrolls out of view.
+    const [inView, setInView] = React.useState(true);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = wrapperRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setInView(entry.isIntersecting),
+            { rootMargin: "100px" }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
     if (reducedMotion) return null;
 
+    return (
+        <div ref={wrapperRef} className="absolute inset-0 w-full h-full pointer-events-none">
+            {inView && renderEffect(style, intensity, speed, pixelSize)}
+        </div>
+    );
+}
+
+function renderEffect(
+    style: PixelAnimationProps["style"],
+    intensity: number,
+    speed: number,
+    pixelSize: number
+) {
     switch (style) {
         case "glyph-matrix":
             return <GlyphMatrixEffect intensity={intensity} speed={speed} pixelSize={pixelSize} />;
