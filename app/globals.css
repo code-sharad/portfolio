@@ -278,3 +278,14 @@
 .scrollbar-auto::-webkit-scrollbar-thumb { background: transparent; }
 .scrollbar-auto:hover::-webkit-scrollbar-thumb { background: rgb(168 162 158 / 0.4); }
 .dark .scrollbar-auto:hover::-webkit-scrollbar-thumb { background: rgb(87 83 78 / 0.5); }
+/* ===== Site-wide background: warm radial glow (light + dark) ===== */
+.site-glow {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 8%, rgba(214, 211, 209, 0.55), transparent 65%),
+    radial-gradient(ellipse 120% 90% at 50% 110%, rgba(120, 113, 108, 0.08), transparent 55%);
+}
+.dark .site-glow {
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 8%, rgba(68, 64, 60, 0.45), transparent 65%),
+    radial-gradient(ellipse 120% 90% at 50% 110%, rgba(168, 162, 158, 0.05), transparent 55%);
+}

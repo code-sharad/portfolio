@@ -8,6 +8,8 @@ export const gridSvgDark = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.
 export function GridBackground({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen w-full dark:bg-stone-950 bg-stone-100 relative">
+      {/* Site-wide warm radial glow — same backdrop on every page/section */}
+      <div className="site-glow pointer-events-none fixed inset-0 z-0" aria-hidden="true" />
       <div className="relative z-20 w-full flex items-center justify-center min-h-screen">{children}</div>
     </div>
   );
