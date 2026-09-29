@@ -48,7 +48,7 @@ export const experiencesData = [
     title: "Maharashtra Institute of Technology",
     location: "Chhatrapati Sambhajinagar, Maharashtra, India",
     description:
-      "Pursuing a Bachelor's degree in Electronics and Computer Engineering.",
+      "Bachelor of Technology in Electronics & Computer Engineering (CGPA: 7.65).",
     icon: React.createElement(LuGraduationCap),
     date: "2022 - 2026",
   },

@@ -42,8 +42,8 @@ function About() {
       <div className="space-y-6">
         {/* Intro paragraph */}
         <p className="text-stone-600 dark:text-stone-400 leading-[1.8] text-[1.0625rem]">
-          I&apos;m a software engineer pursuing a B.Tech in Electronics &amp; Computer
-          Engineering at the{" "}
+          I&apos;m a software engineer with a B.Tech in Electronics &amp; Computer
+          Engineering from the{" "}
           <Highlight>Maharashtra Institute of Technology</Highlight> (2022–2026).
           I build web applications and backend systems with{" "}
           <Highlight>TypeScript, Node.js, PostgreSQL, and MongoDB</Highlight>.
