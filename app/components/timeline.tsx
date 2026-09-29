@@ -6,7 +6,7 @@ export default function Component() {
     return (
         <div className="relative mt-12">
             {/* vertical line across the whole timeline */}
-            <div className="absolute left-[1rem] sm:left-[calc(10rem+1rem)] top-0 bottom-0 w-[2px] bg-stone-900 dark:bg-stone-900 pointer-events-none" />
+            <div className="absolute left-[1rem] sm:left-[calc(10rem+2rem)] top-0 bottom-0 w-[2px] bg-stone-900 dark:bg-stone-900 pointer-events-none" />
 
             <ul className="grid gap-y-10">
                 {experiencesData.map((item, index) => (
@@ -21,7 +21,7 @@ export default function Component() {
 
                         {/* axis column with dot */}
                         <div className="relative h-4">
-                            <div className="absolute left-1/2 lg:left-0 -translate-x-1/2 top-0 w-4 h-4 rounded-full border-2 border-stone-600 dark:border-stone-400 bg-stone-900 dark:bg-stone-100 z-10" />
+                            <div className="absolute left-1/2 -translate-x-1/2 top-0 w-4 h-4 rounded-full border-2 border-stone-600 dark:border-stone-400 bg-stone-900 dark:bg-stone-100 z-10" />
                         </div>
 
                         {/* content */}

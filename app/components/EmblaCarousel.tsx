@@ -29,16 +29,16 @@ const EmblaCarousel = (props: PropType) => {
             </div>
 
             <div className="embla__controls flex justify-center mt-6">
-                <div className="embla__dots flex gap-2">
+                <div className="embla__dots flex gap-1.5">
                     {scrollSnaps.map((_, index) => (
                         <DotButton
                             key={index}
                             onClick={() => onDotButtonClick(index)}
                             aria-label={`Go to slide ${index + 1}`}
-                            className={'w-3 h-3 rounded-full transition-all '.concat(
+                            className={'flex items-center justify-center w-6 h-6 rounded-full transition-all before:content-[""] before:block before:rounded-full before:w-2 before:h-2 before:transition-all '.concat(
                                 index === selectedIndex
-                                    ? 'bg-stone-800 dark:bg-stone-200 w-6'
-                                    : 'bg-stone-300 dark:bg-stone-700 hover:bg-stone-400 dark:hover:bg-stone-600'
+                                    ? 'before:w-4 before:bg-stone-800 dark:before:bg-stone-200'
+                                    : 'before:bg-stone-300 dark:before:bg-stone-700 hover:before:bg-stone-400 dark:hover:before:bg-stone-600'
                             )}
                         />
                     ))}
